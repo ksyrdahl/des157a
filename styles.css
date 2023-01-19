@@ -1,0 +1,13 @@
+main {
+    max-width: 1200px;
+    min-width: 800px;
+}
+
+.banner{
+    width: 1100px;
+    height: 250px;
+}
+
+ul{
+    list-style-type: none;
+}
