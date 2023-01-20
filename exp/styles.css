@@ -1,0 +1,31 @@
+
+h2{
+    font-weight: 200;
+    font-size: 24px;
+    color:#6E66A0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 20%, rgba(180,172,233,1) 100%);
+    font-family: 'Merriweather Sans', sans-serif;
+    word-spacing: 0.15em;
+    margin: auto;
+    height: 900px;
+}
+
+h1{
+    font-size: 30px;
+    color: white;
+    background: #6E66A0;
+    border-radius: 30px;
+    width: 279px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 200px;
+}
