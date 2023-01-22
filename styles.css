@@ -5,6 +5,7 @@ main {
     justify-content: center;
     gap: 3em;
     margin: auto;
+    padding-top: 15px;
 }
 
 header{
@@ -14,11 +15,11 @@ header{
 }
 
 h1{
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     background: #6E66A0;
     border-radius: 30px;
-    width: 279px;
+    width: 250px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -26,7 +27,7 @@ h1{
     margin: auto;
     position: absolute;
     top: 1em;
-    left: 16.5em;
+    left: 20em;
 }
 
 #textline {
@@ -34,13 +35,13 @@ h1{
     justify-content: center;
     gap: 1.5em;
     position: absolute;
-    top: 4.7em;
+    top: 4.2em;
     left: 24.5em;
 }
 
 h2{
     font-weight: 200;
-    font-size: 24px;
+    font-size: 22px;
     color:#6E66A0;
 }
 
@@ -62,7 +63,7 @@ section{
     height: 356px;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 20%, rgba(180,172,233,1) 100%);
-    border-radius: 25px;
+    border-radius: 25px; 
     margin: none;
     box-shadow: 0px 4px 11px 0px rgba(105,90,205,1);
     padding: none;
@@ -77,26 +78,33 @@ section:hover{
     transform: scale(1.1);
 }
 
-#banner{
-    width: 1100px;
-    height: 250px;
-    margin-bottom: 2.5em;
-}
-
 ul{
     list-style-type: none;
     font-weight: 200;
-    font-size: 20px;
-    margin:.1em;
+    font-size: 19px;
+    padding-left: 1.5em;
 }
 
 li{
     padding-bottom: .5em;
 }
 
-a{
+a {
     text-decoration: none;
     color: #5F5697;
+    padding: 10px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+section a{
+    border-radius: 25px;
+    transition: .3s ease-in-out;
+}
+
+section a:hover{
+    color: #ffffff;
+    background-color: #6E66A0;
 }
 
 main h2{
@@ -145,7 +153,6 @@ main h2{
  }
 
 footer a{
-    color:#6E66A0;
     font-size: 50px;
     
  }
@@ -157,4 +164,163 @@ footer a:hover{
 footer {
     height: 80px;
     text-align: center;
+    color:#6E66A0;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 800;
+}
+
+#banner{
+    width: 1100px;
+    height: 250px;
+    margin-bottom: 2.5em;
+    position: relative;
+    margin-top: 10px;
+}
+
+#poppy {
+    filter:drop-shadow(0px 4px 6px #8c86b4);
+    position: absolute; 
+    top: 4em;
+    left: -2em;
+    transition: 1s ease-in-out;
+}
+#poppy:hover{
+    transform: scale(1.1);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#sakura {
+    filter:drop-shadow(0px 4px 6px #8c86b4);
+    position: absolute;
+    top: 1em;
+    left: 12em; 
+    transition: 1s ease-in-out;
+}
+
+#sakura:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#fuchsia {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 11em;
+    left: 12em;
+    transition: 1s ease-in-out;
+}
+
+#fuchsia:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#iris {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 9em;
+    left: 19em;
+    transition: 1s ease-in-out;
+}
+
+#iris:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#wheat {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 7.5em;
+    left: 26.5em;
+    transition: 1s ease-in-out;
+}
+
+#wheat:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#daisy {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 14em;
+    left: 26em;
+    transition: 1s ease-in-out;
+}
+
+#daisy:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#baby {
+    filter:drop-shadow(0px 4px 6px #8c86b4);
+    position: absolute; 
+    top: 8em;
+    left: 33em;
+    transition: 1s ease-in-out;
+}
+
+#baby:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#pansy {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 14.8em;
+    left: 42.4em;
+    transition: 1s ease-in-out;
+}
+
+#pansy:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#leaves {
+    filter:drop-shadow(0px 4px 6px #8c86b4); 
+    position: absolute;
+    top: 7.5em;
+    left: 44em;
+    transition: 1s ease-in-out;
+}
+
+#leaves:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#goldstar {
+    filter:drop-shadow(0px 4px 6px #8c86b4);
+    position: absolute; 
+    top: 12em;
+    left: 51.5em;
+    transition: 1s ease-in-out;
+}
+
+#goldstar:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
+}
+
+#wishbone {
+    filter:drop-shadow(0px 4px 6px #8c86b4);
+    position: absolute;
+    top: 7.5em;
+    left: 55em;
+    transition: 1s ease-in-out;
+}
+
+#wishbone:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 4px 6px #584bb1);
 }
