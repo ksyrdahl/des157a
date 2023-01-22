@@ -51,12 +51,22 @@ h2{
 
 body {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 20%, rgba(180,172,233,1) 100%);
+    /* background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 44%, rgba(182,177,220,1) 52%, rgba(255,255,255,1) 100%); */
+    /* background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 49%, rgba(255,255,255,1) 100%); */
+    background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 49%, rgba(211,206,242,1) 65%, rgba(243,241,254,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
     font-family: 'Merriweather Sans', sans-serif;
     word-spacing: 0.15em;
     margin: auto;
     height: 900px;
 }
+
+@keyframes gradient {
+    0% {background-position: right;}
+    50% {background-position: left;}
+    100% {background-position: right;}
+  }
 
 section{
     width: 277px;
@@ -99,7 +109,7 @@ a {
 
 section a{
     border-radius: 25px;
-    transition: .3s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 section a:hover{
@@ -154,7 +164,7 @@ main h2{
 
 footer a{
     font-size: 50px;
-    
+    transition: 1s ease-in-out
  }
 
 footer a:hover{
