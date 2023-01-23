@@ -8,6 +8,8 @@ main {
     padding-top: 15px;
 }
 
+/* Header elements */
+
 header{
     margin: auto;
     position: relative;
@@ -30,6 +32,7 @@ h1{
     left: 20em;
 }
 
+/* This id allows me to combine the 3 h2s into one line */
 #textline {
     display: flex;
     justify-content: center;
@@ -45,14 +48,15 @@ h2{
     color:#6E66A0;
 }
 
+/*Added id so I can make two h2s have different properties */
 #bold{
     font-weight: 600;
 }
 
+/* Making the background change constantly. Linear gradients are pictures so must increase background size and then move background position in keyframes */
+
 body {
     background: rgb(255,255,255);
-    /* background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 44%, rgba(182,177,220,1) 52%, rgba(255,255,255,1) 100%); */
-    /* background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 49%, rgba(255,255,255,1) 100%); */
     background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 49%, rgba(211,206,242,1) 65%, rgba(243,241,254,1) 100%);
     background-size: 500%;
     animation: gradient 30s infinite;
@@ -67,6 +71,8 @@ body {
     50% {background-position: left;}
     100% {background-position: right;}
   }
+
+/* Section elements */
 
 section{
     width: 277px;
@@ -130,6 +136,9 @@ main h2{
     margin-top: .4em;
 }
 
+/* Makeing bee disappear behind the beehive and reappear on hover command */
+/* Still part of section, and need position relative in "section" to go with position absolute in "#bee"*/
+
 #beehive {
     margin-left: 120px;
 }
@@ -159,6 +168,8 @@ main h2{
     }
  }
 
+ /* Elements in footer */
+
 footer a{
     font-size: 50px;
     transition: 0.2s ease-in-out
@@ -181,6 +192,8 @@ footer p {
     margin: 0;
     font-weight: 800;
 }
+
+/* Changing the size of the elements in banner and positioning them */
 
 #banner{
     width: 1100px;
@@ -210,22 +223,12 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#sakura:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
-}
-
 #fuchsia {
     filter:drop-shadow(0px 4px 6px #8c86b4); 
     position: absolute;
     top: 11em;
     left: 12em;
     transition: 1s ease-in-out;
-}
-
-#fuchsia:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
 }
 
 #iris {
@@ -236,22 +239,12 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#iris:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
-}
-
 #wheat {
     filter:drop-shadow(0px 4px 6px #8c86b4); 
     position: absolute;
     top: 7.5em;
     left: 26.5em;
     transition: 1s ease-in-out;
-}
-
-#wheat:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
 }
 
 #daisy {
@@ -262,22 +255,12 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#daisy:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
-}
-
 #baby {
     filter:drop-shadow(0px 4px 6px #8c86b4);
     position: absolute; 
     top: 8em;
     left: 33em;
     transition: 1s ease-in-out;
-}
-
-#baby:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
 }
 
 #pansy {
@@ -288,22 +271,12 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#pansy:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
-}
-
 #leaves {
     filter:drop-shadow(0px 4px 6px #8c86b4); 
     position: absolute;
     top: 7.5em;
     left: 44em;
     transition: 1s ease-in-out;
-}
-
-#leaves:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
 }
 
 #goldstar {
@@ -314,11 +287,6 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#goldstar:hover{
-    transform: scale(1.2);
-    filter:drop-shadow(0px 4px 6px #584bb1);
-}
-
 #wishbone {
     filter:drop-shadow(0px 4px 6px #8c86b4);
     position: absolute;
@@ -327,7 +295,16 @@ footer p {
     transition: 1s ease-in-out;
 }
 
-#wishbone:hover{
+#goldstar:hover,
+#wishbone:hover,
+#leaves:hover,
+#pansy:hover,
+#baby:hover,
+#daisy:hover,
+#wheat:hover,
+#iris:hover,
+#fuchsia:hover,
+#sakura:hover{
     transform: scale(1.2);
     filter:drop-shadow(0px 4px 6px #584bb1);
 }
