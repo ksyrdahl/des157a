@@ -140,15 +140,16 @@ main h2{
 
 #bee {
     position: absolute;
-    top: 4.4em;
+    top: 9.4em;
     right: 0;
     opacity: 0;
     transition: 1s ease-in-out;
     border: 5em solid transparent;
+    border-top: 0;
 }
 
 #bee:hover {
-    top: 4.4em;
+    top: 9.4em;
     right: 4.1em; 
     opacity: 100%;
 }
