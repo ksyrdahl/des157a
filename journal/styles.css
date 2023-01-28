@@ -1,0 +1,136 @@
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
+    margin: auto;
+}
+
+main {
+    display: flex;
+    margin: auto;
+}
+
+.entryNum {
+    width: 400px;
+    position: relative;
+    padding: 100px;
+    padding-top: 200px;
+    height:390px;
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+}
+
+.entryNum h1 {
+    font-family: 'Metal', cursive;
+    font-size: 300px;
+    font-weight: 100;
+    color: #6E66A0;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
+    border-radius: 390px;
+    width: 340px;
+    height: 340px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-right: 50px;
+    text-shadow: 2px 2px 2px #695acd74;
+}
+
+#poppy {
+    position: absolute;
+    bottom: 5em;
+    left: 21em;
+}
+
+.divider {
+    margin: 50px;
+    height: 1067px;
+    margin-top: 80px;
+    width: 5px;
+    border-radius: 25px;
+    background: #A6A0D2;
+}
+
+.entry {
+    width: 500px;
+    background: #F3F1FE;
+    border-radius: 25px;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+    color: #5F5697;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    filter:drop-shadow(0px 4px 2px #8c86b4);
+}
+
+p {
+    font-size: 16px;
+    line-height: 29px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 0;
+}
+
+.date {
+   font-size: 20px;
+   font-style: italic;
+   padding-left: 50px;
+   padding-bottom: 10px;
+}
+
+.dateAndLine {
+    display: flex;
+}
+
+
+
+.dateLine {
+    background: #C7C0F9;
+    height: 2px;
+    width: 239px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+a {
+    color: #5F5697;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 32px;
+    width: 420px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(255,255,255,0) 50%,rgba(214,210,243,1) 100%);
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+#title {
+    display: flex;
+}
+
+#example {
+    font-size: 24px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(255,255,255,0) 50%,rgba(214,210,243,1) 100%);
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    padding-right: 10px;
+}
+
+h3 {
+    align-self: end;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 35px;
+}
