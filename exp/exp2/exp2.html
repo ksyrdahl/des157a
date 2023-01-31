@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <header>
+        <h1>Change the Background</h1>
+    </header>
+   <script>
+
+        // My program prompts the user for their favorite color and then changes the background to the color they enter.
+
+        var favColor = prompt('What is your favorite color?','');
+
+
+        var bodyStyle = document.getElementsByTagName('body');
+
+        function back(color){
+            if (color == null ||  color == ''){
+                    console.log("You didn't give me a color");
+            }
+            else{
+                    console.log(`You entered ${color}.`);
+
+                    for(var i=0; i<bodyStyle.length; i++){
+                        bodyStyle[i].style.backgroundColor = favColor;
+                    }
+            }
+        }
+
+        back(favColor);
+     
+   </script>
+
+
+</body>
+</html>
