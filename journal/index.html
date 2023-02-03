@@ -10,42 +10,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Metal&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script> 
     <title>Learning Journal</title>
 </head>
 <body>
     <main>
-        
-            <section class="entryNum">
-                <h1>01</h1>
 
-                <div id="poppy"><img src="images/poppy.svg" alt="California Poppy" width="222" height="325"></div>
-            </section>
-   
+        <div id="numContain">
+
+            
+                <section id="entryNum2">
+                    <h1>02</h1>
+
+                    <div id="baby"><img src="images/babyBlues.svg" alt="Baby Blue" width="213" height="306"></div>
+                </section>
+           
+
+            
+                <section id="entryNum1">
+                    <h1>01</h1>
+
+                    <div id="poppy"><img src="images/poppy.svg" alt="California Poppy" width="222" height="325"></div>
+                </section>
+           
+
+        </div>
+
         <div class="divider"></div>
-
         
-        <section class="entry">
-            <h1>Researching Form Design</h1>
+        <div id="entryContain">
 
-            <div class="dateAndLine">
-                <h2 class="date">Jan. 27th, 2023</h2>
-                <div class="dateLine"></div>
-            </div>
-            <p>Most of the advice from the article “<a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">Best practices for form design</a>” by Salim Ansari, is common design knowledge and applicable to most website designs. Such as avoiding large chunks of information that creates cognitive overload, not including more information than necessary, or pushing the user down the page with a vertical layout rather than a horizontal one.</p>
+            <section class="entry">
 
-            <p>However, something that I found interesting was what he said about why forms tend to have the more difficult questions at the end. This is because once users fill out the easier questions, they are less likely to abandon the form once they get to the more difficult information to fill out because they are already invested. This is a technique I have seen used over and over again in the forms that I have filled out, but I never knew the reason for it until now.</p>
+                <h1>Researching Overlays</h1>
 
-            <div id="line"></div>
+                    <div class="dateAndLine">
+                        <h2 class="date">Feb. 2nd, 2023</h2>
+                        <div class="dateLine"></div>
+                    </div>
+                    <p>The article “<a href="https://www.nngroup.com/articles/overuse-of-overlays/">Overuse of Overlays: How to Avoid Misusing Lightboxes</a>” did a good job at explaining how frustrating lightboxes can be for users if not used correctly. My main takeaway is that you should use overlays in moderation and only if absolutely necessary. The problem with overlays seems to be that when the method first came out designers started using them with everything. It was a way to be lazy and add external information while avoiding changing the navigation. However, this created a lot of user frustration as the overlays were not being used appropriately.</p>
 
-            <div id="title">
-                 <h2 id="example">Example:</h2>
+                    <p>However, something that I found interesting was what he said about why forms tend to have the more difficult questions at the end. This is because once users fill out the easier questions, they are less likely to abandon the form once they get to the more difficult information to fill out because they are already invested. This is a technique I have seen used over and over again in the forms that I have filled out, but I never knew the reason for it until now.</p>
+            
+            </section>
+            
+            <section class="entry">
+                <h1>Researching Form Design</h1>
 
-                <h3>Good form design</h3>
-            </div>
+                <div class="dateAndLine">
+                    <h2 class="date">Jan. 27th, 2023</h2>
+                    <div class="dateLine"></div>
+                </div>
+                <p>Most of the advice from the article “<a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">Best practices for form design</a>” by Salim Ansari, is common design knowledge and applicable to most website designs. Such as avoiding large chunks of information that creates cognitive overload, not including more information than necessary, or pushing the user down the page with a vertical layout rather than a horizontal one.</p>
 
-            <p>The “<a href="https://pets.byspotify.com/">Pets by Spotify</a>” form is an example of best practices for form design. It is very interactive, quick, and has minimal questions. It also chunks each question onto a separate page and does not require any scrolling.</p>
+                <p>However, something that I found interesting was what he said about why forms tend to have the more difficult questions at the end. This is because once users fill out the easier questions, they are less likely to abandon the form once they get to the more difficult information to fill out because they are already invested. This is a technique I have seen used over and over again in the forms that I have filled out, but I never knew the reason for it until now.</p>
 
-        </section>
+                <div id="line"></div>
+
+                <div id="title">
+                    <h2 id="example">Example:</h2>
+
+                    <h3>Good form design</h3>
+                </div>
+
+                <p>The “<a href="https://pets.byspotify.com/">Pets by Spotify</a>” form is an example of best practices for form design. It is very interactive, quick, and has minimal questions. It also chunks each question onto a separate page and does not require any scrolling.</p>
+
+            </section>
+
+        </div>
+    
     </main>
 </body>
 </html>
