@@ -1,0 +1,303 @@
+/* Header on the left input page */
+
+body{
+    background: rgb(44,74,184);
+    background: linear-gradient(180deg, rgba(44,74,184,1) 1%, rgba(14,23,52,1) 100%);
+    gap: 50px;
+    display: flex;
+    height: 1000px;
+    width: 1200px;
+    margin: auto;
+}
+
+header{
+    color:white;
+    margin: 0px;
+    opacity: .8;
+}
+
+#uc {
+    font-family: 'Cardo', serif;
+    font-size: 115px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+#davis {
+    font-family: 'Poppins', sans-serif;
+    font-size: 110px;
+    font-weight:900;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.head1 {
+    display: flex;
+    margin: 0px;
+}
+
+#tips {
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+#freshman {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.head2 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    gap: 1em;
+    margin: 0px;
+}
+
+.line {
+    background: white;
+    width: 82.5px;
+    height: 1px;
+    align-self: center;
+}
+
+/* header output page */
+
+#ucOut {
+    font-family: 'Cardo', serif;
+    font-size: 83px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px;
+    color: #263879;
+}
+
+#davisOut {
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight:900;
+    text-transform: uppercase;
+    margin: 0px;
+    color: #263879; 
+}
+
+#tipsOut {
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0px;
+    color: #263879;
+}
+
+#freshmanOut {
+    font-size: 32px;
+    font-weight: 100;
+    margin: 0px;
+    color: #263879;
+}
+
+.lineOut {
+    background: #263879;
+    width: 42px;
+    height: 1px;
+    align-self: center; 
+    color: #263879;
+}
+
+.head2Out {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    gap: .5em;
+    margin: 0px;
+    color: #263879;
+}
+
+.output {
+    color: #263879;
+}
+
+.output p {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 37px;
+    font-weight: 200;
+    margin-top: 50px;
+    width: 368px;
+}
+
+#madlibs {
+    background-color: #FDF7E0;
+    border: solid 30px #DBAA21;
+    border-radius: 61px; 
+    width: 380px;
+    padding: 56px;
+    margin: auto;
+    margin-top: 62px;
+    box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.30);
+}
+
+#thickLine {
+    width: 329px;
+    height: 70px;
+    background-color: #ffffff7a;
+    border-radius: 25px;
+    position: relative;
+    top: 25em;
+    right: 5em;
+    z-index: -1;
+}
+
+button {
+    width: 231px;
+    height: 48px;
+    border: solid 5px #DBAA21;
+    margin-top: 20px;
+    margin-left: 148px;
+    border-radius: 25px;
+    color: #263879;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    padding: 0px;
+    text-shadow: 2px 2px 2px #0000001d; 
+    position: relative;
+    top: 14.5em;
+    right: 5.8em;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+a {
+   text-decoration: none;
+   color: #263879;
+}
+
+#downArrow {
+    font-size: 70px;
+    color:#DBAA21;
+    position: relative;
+    top: 4.9em;
+    left: 1.2em;
+}
+
+#turkey {
+    position: relative;
+    top: 22em;
+    left: 5em;
+    z-index: -1;
+}
+/* Form input */
+
+.input main {
+    margin-top: 92px;
+}
+
+#wordInput {
+    background-color: #DBAA21;
+    padding: 33px;
+    width: 434px;
+    height: 466px;
+    border-radius: 66px;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.backBox {
+    width: 115px;
+    height: 36px;
+    background-color: #fdf7e0ba; 
+    border-radius: 20px; 
+    margin-right: 10px;
+    margin-top: 2px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    /* width: 125px;
+    height:  45px; */
+    /* background-color: #fdf7e0ba; */
+    color: #263879;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px #0000001d;
+    padding-left: 10px;
+    display: flex;
+
+}
+
+input {
+    width: 254px;
+    height: 46px;
+    border-radius: 20px;
+    background-color: #FDF7E0;
+    font-size: 18px;
+    font-weight: 200;
+    border-style: none;
+    box-shadow: inset 0px 4px 4px 0px rgba(0,0,0,0.25);
+    padding-left: 20px;
+}
+
+#submit {
+    width: 163px;
+    height: 48px;
+    border: solid 5px #DBAA21;
+    margin-top: 20px;
+    margin-left: 148px;
+    border-radius: 25px;
+    color: #263879;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    padding: 0px;
+    text-shadow: 2px 2px 2px #0000001d;
+}
+
+#wheels{
+    display: flex;
+}
+
+#wheelL {
+    position: relative;
+    top: 16.65em;
+    left: 4.85em;
+    z-index: -1;
+}
+
+#wheelR {
+    position: relative;
+    top: 16.65em;
+    left: 11.25em;
+    z-index: -1;
+}
+
+#bikeFrame{
+    position: relative;
+    right: 1em;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+}
+
+#enter {
+    display: flex;
+}
+
+#rightArrow {
+    font-size: 50px;
+    color:#DBAA21;
+    position: relative;
+    bottom: .65em;
+    left: .2em;
+}

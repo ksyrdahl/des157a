@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script> 
+    <title>UC Davis: Tips for Freshman</title>
+</head>
+<body class="input">
+    <header>
+        <div id="wheels">
+            <div id="wheelL"><img src="images/wheelL.svg" alt="Left Wheel" width="161" height="161"></div>
+            <div id="wheelR"><img src="images/wheelR.svg" alt="Right Wheel" width="161" height="161"></div>
+        </div>
+
+        <div id="bikeFrame"><img src="images/bikeFrame.svg" alt="Bike Frame" width="497" height="257"></div>
+        <div class="head1">
+            <h1 id="uc">Uc</h1>
+            <h1 id="davis">Davis</h1>
+        </div>
+        <div class="head2">
+            <div class="line"></div>
+            <h2 id="tips">Tips</h2>
+            <h2 id="freshman">for freshman</h2>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main>
+        <form action="processor.php" method="POST">
+            <div id="wordInput">
+            <label for="vehicle"><div class="backBox">Vehicle</div>
+                <input type="text" required="required" name="vehicle" id="vehicle" placeholder="car, skates...">
+            </label>
+            <label for="adj1"><div class="backBox">Adjective</div>
+                <input type="text" required="required" name="adj1" id="adj1" placeholder="colorful, old...">
+            </label>
+            <label for="verb1"><div class="backBox">Verb</div>
+                <input type="text" required="required" name="verb1" id="verb1" placeholder="study, read...">
+            </label>
+            <label  for="verbing1"><div class="backBox">Verb -ing</div>
+                <input type="text" required="required" name="verbing1" id="verbing1" placeholder="running, walking...">
+            </label>
+            <label  for="verbing2"><div class="backBox">Verb -ing</div>
+                <input type="text" required="required" name="verbing1" id="verbing1" placeholder="running, walking...">
+            </label>
+            <label for="adj2"><div class="backBox">Adjective</div>
+                <input type="text" required="required" name="adj2" id="adj2" placeholder="colorful, old...">
+            </label>
+            <label for="verb2"><div class="backBox">Verb</div>
+                <input type="text" required="required" name="verb2" id="verb2" placeholder="study, read...">
+            </label>
+            </div>
+
+            <div id="enter">
+                <a href="output.html">
+                    <input id="submit" type="submit" name="send" value="Enter">
+                </a>
+            <p id="rightArrow"><i class="fas fa-caret-right"></i></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
