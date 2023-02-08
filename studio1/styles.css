@@ -3,12 +3,10 @@
 body{
     background: rgb(44,74,184);
     background: linear-gradient(180deg, rgba(44,74,184,1) 1%, rgba(14,23,52,1) 100%);
-    gap: 50px;
-    display: flex;
-    height: 1000px;
-    width: 1200px;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
 }
+
 
 header{
     color:white;
@@ -38,14 +36,14 @@ header{
 }
 
 #tips {
-    font-size: 40px;
+    font-size: 39px;
     font-weight: 300;
     text-transform: uppercase;
     margin: 0px;
 }
 
 #freshman {
-    font-size: 40px;
+    font-size: 39px;
     font-weight: 100;
     margin: 0px;
 }
@@ -115,11 +113,7 @@ header{
     color: #263879;
 }
 
-.output {
-    color: #263879;
-}
-
-.output p {
+#overlay p {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     line-height: 37px;
@@ -133,9 +127,8 @@ header{
     border: solid 30px #DBAA21;
     border-radius: 61px; 
     width: 380px;
+    height: 500px;
     padding: 56px;
-    margin: auto;
-    margin-top: 62px;
     box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.30);
 }
 
@@ -145,8 +138,8 @@ header{
     background-color: #ffffff7a;
     border-radius: 25px;
     position: relative;
-    top: 25em;
-    right: 5em;
+    top: 20em;
+    right: 2em;
     z-index: -1;
 }
 
@@ -163,10 +156,10 @@ button {
     font-weight: 800;
     font-size: 28px;
     padding: 0px;
-    text-shadow: 2px 2px 2px #0000001d; 
+    text-shadow: 2px 2px 2px #0000001d;
     position: relative;
-    top: 14.5em;
-    right: 5.8em;
+    top: 11.2em; 
+    right: 4em;
 }
 
 button:hover {
@@ -179,37 +172,50 @@ a {
 }
 
 #downArrow {
-    font-size: 70px;
     color:#DBAA21;
     position: relative;
-    top: 4.9em;
-    left: 1.2em;
+    top: 13em;
+    left: 7em;
+    font-size: 2em;
 }
 
 #turkey {
+    margin-right: 5em;
     position: relative;
-    top: 22em;
-    left: 5em;
+    top: 17em;
+    left: 8em;
     z-index: -1;
 }
+
+
 /* Form input */
 
 .input main {
     margin-top: 92px;
 }
 
+.input {
+    margin: auto;
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #wordInput {
     background-color: #DBAA21;
-    padding: 33px;
+    padding: 35px;
     width: 434px;
-    height: 466px;
+    height: 464px;
     border-radius: 66px;
     font-family: 'Poppins', sans-serif; 
     font-size: 20px;
     font-weight: 700;
 }
 
-.backBox {
+.backbox {
     width: 115px;
     height: 36px;
     background-color: #fdf7e0ba; 
@@ -221,18 +227,19 @@ a {
     padding-right: 10px;
 }
 
+.madlibLine{
+    display: flex;
+    margin-bottom: 19px;
+    margin-left: 10px;
+}
+
 label {
     display: block;
     margin-bottom: 20px;
-    /* width: 125px;
-    height:  45px; */
-    /* background-color: #fdf7e0ba; */
     color: #263879;
     font-weight: 800;
     text-shadow: 2px 2px 2px #0000001d;
     padding-left: 10px;
-    display: flex;
-
 }
 
 input {
@@ -300,4 +307,39 @@ input {
     position: relative;
     bottom: .65em;
     left: .2em;
+}
+
+/* Overlay */
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay {
+    color: #263879;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(44,74,184,1) 1%, rgba(14,23,52,1) 100%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

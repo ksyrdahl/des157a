@@ -13,57 +13,99 @@
     <script src="script.js" defer></script> 
     <title>UC Davis: Tips for Freshman</title>
 </head>
-<body class="input">
-    <header>
-        <div id="wheels">
-            <div id="wheelL"><img src="images/wheelL.svg" alt="Left Wheel" width="161" height="161"></div>
-            <div id="wheelR"><img src="images/wheelR.svg" alt="Right Wheel" width="161" height="161"></div>
-        </div>
-
-        <div id="bikeFrame"><img src="images/bikeFrame.svg" alt="Bike Frame" width="497" height="257"></div>
-        <div class="head1">
-            <h1 id="uc">Uc</h1>
-            <h1 id="davis">Davis</h1>
-        </div>
-        <div class="head2">
-            <div class="line"></div>
-            <h2 id="tips">Tips</h2>
-            <h2 id="freshman">for freshman</h2>
-            <div class="line"></div>
-        </div>
-    </header>
-    <main>
-        <form action="processor.php" method="POST">
-            <div id="wordInput">
-            <label  for="vehicle"><div class="backBox">Vehicle</div>
-                <input type="text" required="required" name="vehicle" id="vehicle" placeholder="car, skates...">
-            </label>
-            <label for="adj1"><div class="backBox">Adjective</div>
-                <input type="text" required="required" name="adj1" id="adj1" placeholder="colorful, old...">
-            </label>
-            <label for="verb1"><div class="backBox">Verb</div>
-                <input type="text" required="required" name="verb1" id="verb1" placeholder="study, read...">
-            </label>
-            <label for="verbing1"><div class="backBox">Verb -ing</div>
-                <input type="text" required="required" name="verbing1" id="verbing1" placeholder="running, walking...">
-            </label>
-            <label for="verbing2"><div class="backBox">Verb -ing</div>
-                <input type="text" required="required" name="verbing2" id="verbing2" placeholder="running, walking...">
-            </label>
-            <label for="adj2"><div class="backBox">Adjective</div>
-                <input type="text" required="required" name="adj2" id="adj2" placeholder="colorful, old...">
-            </label>
-            <label for="verb2"><div class="backBox">Verb</div>
-                <input type="text" required="required" name="verb2" id="verb2" placeholder="study, read...">
-            </label>
+<body>
+    <section class="input">
+        <header>
+            <div id="wheels">
+                <div id="wheelL"><img src="images/wheelL.svg" alt="Left Wheel" width="161" height="161"></div>
+                <div id="wheelR"><img src="images/wheelR.svg" alt="Right Wheel" width="161" height="161"></div>
             </div>
 
-            <div id="enter">
-                <input id="submit" type="submit" name="send" value="Enter">
-            
-                <p id="rightArrow"><i class="fas fa-caret-right"></i></p>
+            <div id="bikeFrame"><img src="images/bikeFrame.svg" alt="Bike Frame" width="497" height="257"></div>
+            <div class="head1">
+                <h1 id="uc">Uc</h1>
+                <h1 id="davis">Davis</h1>
             </div>
-        </form>
-    </main>
+            <div class="head2">
+                <div class="line"></div>
+                <h2 id="tips">Tips</h2>
+                <h2 id="freshman">for Freshman</h2>
+                <div class="line"></div>
+            </div>
+        </header>
+        <main>
+            <form id="myForm" action="processor.php" method="POST">
+                <div id="wordInput">
+                    <div class="madlibLine">
+                        <div class="backbox"><label  for="vehicle">Vehicle</label></div>
+                        <input type="text" name="vehicle" id="vehicle" placeholder="car, skates..." >
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="adj1">Adjective</label></div> 
+                        <input type="text" required="required" name="adj1" id="adj1" placeholder="colorful, old...">
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="verb1">Verb</label></div>
+                        <input type="text" required="required" name="verb1" id="verb1" placeholder="study, read...">
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="verbing1">Verb -ing</label></div>
+                        <input type="text" required="required" name="verbing1" id="verbing1" placeholder="running, walking...">
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="verbing2">Verb -ing</label></div>
+                        <input type="text" required="required" name="verbing2" id="verbing2" placeholder="running, walking...">
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="adj2">Adjective</label></div>
+                        <input type="text" required="required" name="adj2" id="adj2" placeholder="colorful, old...">
+                    </div>
+
+                    <div class="madlibLine">
+                        <div class="backbox"><label for="verb2">Verb</label></div>
+                        <input type="text" required="required" name="verb2" id="verb2" placeholder="study, read...">
+                    </div>
+
+                </div>
+
+                <div id="enter">
+                    <a href="#" class="open"><input id="submit" type="submit" name="send" value="Enter"></a>
+                
+                    <p id="rightArrow"><i class="fas fa-caret-right"></i></p>
+                </div>
+            </form>
+        </main>
+    </section>
+    
+    <section id="overlay" class="hidden">
+            <article>
+                <div id="turkey"><img src="images/turkey.svg" alt="Turkey" width="288" height="393"></div>
+
+                <div id="madlibs">
+                    <div class="head1">
+                        <h1 id="ucOut">Uc</h1>
+                        <h1 id="davisOut">Davis</h1>
+                    </div>
+                    <div class="head2Out">
+                        <div class="lineOut"></div>
+                        <h2 id="tipsOut">Tips</h2>
+                        <h2 id="freshmanOut">for freshman</h2>
+                        <div class="lineOut"></div>
+                    </div>
+                    <article id="freshTips"></article>
+                </div>
+
+                <div>
+                    <div id="thickLine"></div>
+                    <button type="button" class="close">Play Again</button>
+                    <p id="downArrow"><i class="fas fa-caret-down"></i></p>
+                </div>
+            </article>
+    </section>
 </body>
 </html>
