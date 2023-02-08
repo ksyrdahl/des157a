@@ -20,6 +20,36 @@ main {
     flex-direction: column;
 }
 
+#entryNum3 {
+    width: 400px;
+    position: relative;
+    padding: 100px;
+    padding-top: 200px;
+    height:390px;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    margin-bottom: 100px;
+    transition: all .8s;
+}
+
+#entryNum3 h1 {
+    font-family: 'Metal', cursive;
+    font-size: 300px;
+    font-weight: 100;
+    color: #6E66A0;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
+    border-radius: 390px;
+    width: 340px;
+    height: 340px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-right: 50px;
+    text-shadow: 2px 2px 2px #695acd74;
+}
+
 #entryNum2 {
     width: 400px;
     position: relative;
@@ -92,9 +122,15 @@ main {
     left: 24em;
 }
 
+#sakura {
+    position: absolute;
+    bottom: 6.5em;
+    left: 24em;
+}
+
 .divider {
     margin: 50px;
-    height: 2000px;
+    height: 3200px;
     margin-top: 80px;
     width: 5px;
     border-radius: 25px;
