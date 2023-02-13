@@ -9,6 +9,8 @@ body{
 
 
 header{
+    /* from glenda: added relative positioning so that the #trigger could be positioned in relation to its parent */
+    position:relative;
     color:white;
     margin: 0px;
     opacity: .8;
@@ -113,13 +115,18 @@ header{
     color: #263879;
 }
 
-#overlay p {
+#freshTips {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     line-height: 37px;
     font-weight: 200;
     margin-top: 50px;
-    width: 368px;
+    width: 400px;
+    padding: 0px;
+}
+
+article {
+    padding: 0px;
 }
 
 #madlibs {
@@ -174,9 +181,9 @@ a {
 #downArrow {
     color:#DBAA21;
     position: relative;
-    top: 13em;
-    left: 7em;
-    font-size: 2em;
+    top: 3.7em;
+    left: 2em;
+    font-size: 4em;
 }
 
 #turkey {
@@ -267,6 +274,7 @@ input {
     font-weight: 800;
     font-size: 28px;
     padding: 0px;
+    box-shadow: none;
     text-shadow: 2px 2px 2px #0000001d;
 }
 
@@ -278,14 +286,35 @@ input {
     position: relative;
     top: 16.65em;
     left: 4.85em;
-    z-index: -1;
+    /* z-index: -1; */
+}
+
+
+#trigger{
+/* from glenda: added absolute positioning, top and left */
+   position:absolute;
+   top:180px;
+   left:75px;
+    width:430px;
+    height:250px;
+   /* border:1px solid red; */
+}
+
+#trigger:hover{
+    cursor:pointer;
+}
+
+/* glenda added */
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
 }
 
 #wheelR {
     position: relative;
     top: 16.65em;
     left: 11.25em;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 #bikeFrame{
@@ -334,12 +363,21 @@ input {
     transition-timing-function: ease;
 }
 
-#overlay article {
-    display: flex;
+#flexy {
     box-sizing: border-box;
-    padding: 20px;
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+span{
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+span.fade{
+    opacity: 1;
+}
+
