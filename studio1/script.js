@@ -35,34 +35,6 @@
 
         freshTips.innerHTML = myText;
 
-        const splitText = freshTips.innerHtml.split("");
-
-        console.log(splitText);
-
-        // for(let i=0; i < splitText.length; i++){
-        //     myText.innerHTML += "<span>"+ splitText[i] + "</span>";
-        //     freshTips.innerHTML = myText;
-        // }
-
-        // let char = 0;
-        // let timer = setInterval(onTick, 50);
-
-        // function onTick(){
-        //     const span = myText.querySelectorAll('span')[char];
-        //     span.classList.add('fade');
-        //     char++
-        //     if(char === splitText.length){
-        //         complete();
-        //         return;
-        //     }
-        // }
-
-        // function complete(){
-        //     clearInterval(timer);
-        //     timer = null;
-        // }
-
-        // freshTips.innerHTML = myText;
     }); 
 
         document.querySelector('#trigger').addEventListener('mouseover', function(){
@@ -75,6 +47,34 @@
             // from glenda: pause the animation-play-state
             document.querySelector('#wheelL').style.animationPlayState ='paused';
             document.querySelector('#wheelR').style.animationPlayState ='paused';
+        })
+
+        document.querySelector('#submit').addEventListener('mouseover', function(){
+            document.querySelector('#wheelL').style.animation ='rotate 2s linear infinite';
+            document.querySelector('#wheelR').style.animation ='rotate 2s linear infinite';
+        })
+
+        document.querySelector('#submit').addEventListener('mouseout', function(){
+            document.querySelector('#wheelL').style.animationPlayState ='paused';
+            document.querySelector('#wheelR').style.animationPlayState ='paused';
+        })
+
+        
+
+        document.querySelector('#madlibs').addEventListener('mouseover', function(){
+            document.querySelector('#turkey').style.left = '8em';
+        })
+
+        document.querySelector('#madlibs').addEventListener('mouseout', function(){
+            document.querySelector('#turkey').style.left = '25em';
+        })
+
+        document.querySelector('.close').addEventListener('mouseover', function(){
+            document.querySelector('#turkey').style.left = '8em';
+        })
+
+        document.querySelector('.close').addEventListener('mouseout', function(){
+            document.querySelector('#turkey').style.left = '25em';
         })
 
 })();
