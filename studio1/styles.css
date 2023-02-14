@@ -200,16 +200,11 @@ a {
     transition: all 2s ease-in-out;
 }
 
-/* @keyframes appear {
-    from{left: 20em;}
-    to{left: 8em;}
-} */
-
 
 /* Form input */
 
-.input main {
-    margin-top: 92px;
+#formsec {
+    margin-top: 60px;
 }
 
 .input {
@@ -297,7 +292,6 @@ input {
     position: relative;
     top: 16.65em;
     left: 4.85em;
-    /* z-index: -1; */
 }
 
 
@@ -308,7 +302,6 @@ input {
    left:75px;
     width:430px;
     height:250px;
-   /* border:1px solid red; */
 }
 
 #trigger:hover{
@@ -325,7 +318,6 @@ input {
     position: relative;
     top: 16.65em;
     left: 11.25em;
-    /* z-index: -1; */
 }
 
 #bikeFrame{
