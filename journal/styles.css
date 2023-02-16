@@ -76,13 +76,12 @@ main {
 }
 
 .analysisImg img {
-    margin-left: 2em;
     border-radius: 25px;
     margin-bottom: 1em;
 }
 
 figcaption {
-   margin-left: 50px;
+    margin-left: .5em;
    margin-bottom: 1em; 
    font-size: 14px;
    font-style: italic;
