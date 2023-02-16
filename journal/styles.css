@@ -1,6 +1,7 @@
 body {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
+    /* background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%); */
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(221,218,245,1) 19%, rgba(214,210,243,1) 35%, rgba(232,230,247,1) 51%, rgba(252,252,252,1) 67%, rgba(232,230,247,1) 80%, rgba(214,210,243,1) 100%);
     margin: auto;
 }
 
@@ -20,7 +21,7 @@ main {
     flex-direction: column;
 }
 
-#entryNum3 {
+.entryNum {
     width: 400px;
     position: relative;
     padding: 100px;
@@ -33,67 +34,7 @@ main {
     transition: all .8s;
 }
 
-#entryNum3 h1 {
-    font-family: 'Metal', cursive;
-    font-size: 300px;
-    font-weight: 100;
-    color: #6E66A0;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
-    border-radius: 390px;
-    width: 340px;
-    height: 340px;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-right: 50px;
-    text-shadow: 2px 2px 2px #695acd74;
-}
-
-#entryNum2 {
-    width: 400px;
-    position: relative;
-    padding: 100px;
-    padding-top: 200px;
-    height:390px;
-    position: sticky;
-    align-self: flex-start;
-    top: 0;
-    margin-bottom: 100px;
-    transition: all .8s;
-}
-
-#entryNum2 h1 {
-    font-family: 'Metal', cursive;
-    font-size: 300px;
-    font-weight: 100;
-    color: #6E66A0;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%);
-    border-radius: 390px;
-    width: 340px;
-    height: 340px;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-right: 50px;
-    text-shadow: 2px 2px 2px #695acd74;
-}
-
-#entryNum1 {
-    width: 400px;
-    position: relative;
-    padding: 100px;
-    padding-top: 200px;
-    height:390px;
-    position: sticky;
-    align-self: flex-start;
-    top: 0;
-    margin-bottom: 100px;
-    transition: all .8s;
-}
-
-#entryNum1 h1 {
+.entryNum h1 {
     font-family: 'Metal', cursive;
     font-size: 300px;
     font-weight: 100;
@@ -112,8 +53,8 @@ main {
 
 #poppy {
     position: absolute;
-    bottom: 5em;
-    left: 21em;
+    bottom: 7em;
+    left: 23em;
 }
 
 #baby {
@@ -128,9 +69,28 @@ main {
     left: 24em;
 }
 
+#fuchsia {
+    position: absolute;
+    bottom: 1.5em;
+    left: 22em;
+}
+
+.analysisImg img {
+    margin-left: 2em;
+    border-radius: 25px;
+    margin-bottom: 1em;
+}
+
+figcaption {
+   margin-left: 50px;
+   margin-bottom: 1em; 
+   font-size: 14px;
+   font-style: italic;
+}
+
 .divider {
     margin: 50px;
-    height: 3200px;
+    height: 6050px;
     margin-top: 80px;
     width: 5px;
     border-radius: 25px;
@@ -196,11 +156,11 @@ h1 {
     margin-top: 40px;
 }
 
-#title {
+.title {
     display: flex;
 }
 
-#example {
+.example {
     font-size: 24px;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(255,255,255,0) 50%,rgba(214,210,243,1) 100%);
