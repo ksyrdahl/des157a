@@ -75,13 +75,18 @@ main {
     left: 22em;
 }
 
+figure {
+    margin: 0em;
+}
+
 .analysisImg img {
     border-radius: 25px;
     margin-bottom: 1em;
+    margin-left: 2em;
 }
 
 figcaption {
-    margin-left: .5em;
+    margin-left: 3.5em;
    margin-bottom: 1em; 
    font-size: 14px;
    font-style: italic;
