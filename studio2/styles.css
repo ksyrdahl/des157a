@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    color: white;
+    /* background-color: black; */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    font-family: 'Comforter', cursive;
+    transition: ease .5s;
+}
+
+header h1{
+    font-size: 96px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 500px;
+    left: 100px;
+    opacity: 0.8;
+}
+
+header h2{
+    font-size: 64px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 512px;
+    left: 440px;  
+    opacity: 0.5;
+}
+
+header p{
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 550px;
+    left: 200px;  
+    font-family: 'Nunito', sans-serif;
+    width: 500px;
+}
+
+
+#line1{
+    height: 1px;
+    width: 175px;
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    position: absolute;
+    bottom: 579px;
+    left: 20px; 
+}
+
+#line2{
+    height: 1px;
+    width: 55px;
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    position: absolute;
+    bottom: 579px;
+    left: 387px; 
+}
+
+.opening {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+/* End Header Styles */
+
+
+
+/* Main Styles */
+main {
+    width: 28vw;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: #0D122C;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+section {
+    height:  100vh;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+
+/* Firgure Styles and Zoom */
+figure {
+    display: block;
+    margin: 10px;
+    width: 70vw;
+    height: 98vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+
+figure img {
+    position: absolute;
+    transition: all 3s ease;
+}
+
+.sect1{
+    width: 150vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6{
+    width: 3768px;
+}
+
+.sect2 {
+    top: 0;
+    left: 0;
+}
+
+.sect3 {
+    top: 0;
+    left: calc(-3768px + 70vw);
+}
+
+.sect4 {
+    top: calc(-2567px + 100vh);
+    left: 0;
+}
+
+.sect5 {
+    top: calc(-2567px + 100vh);
+    left: calc(-3768px + 70vw);
+}
+
+.sect6 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
