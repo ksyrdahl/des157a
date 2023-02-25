@@ -68,6 +68,7 @@ header p{
     display: block;
     width: 100vw;
     height: 100vh;
+    border-bottom: solid 5px white;
 }
 /* End Header Styles */
 
@@ -77,7 +78,6 @@ header p{
 main {
     width: 28vw;
     padding: 20px;
-    padding-top: 60px;
     background-color: #0D122C;
     margin-left: 10px;
     margin-right: 10px;
@@ -92,6 +92,208 @@ p {
     line-height: 1.5em;
 }
 
+#sect1 {
+    position: relative;
+    margin-top: 140px;
+}
+
+#sect1 h1 {
+    position: absolute;
+    top: 185px;
+    font-family: 'Comforter', cursive;
+    color: #F1AA20;
+    font-size: 70px;
+    font-weight: 400;
+} 
+
+#sect1 h2 {
+    position: absolute;
+    top: 213px;
+    left: 250px;
+    font-family: 'Comforter', cursive;
+    color: #F1AA20;
+    font-size: 55px;
+    opacity: .64;
+    font-weight: 400;
+} 
+
+#sect1 h3 {
+    position: absolute;
+    top: 265px;
+    left: 85px;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+#thin {
+    height: 133px;
+    width: 1px;
+    background: white;
+    opacity: 0.30;
+    position: absolute;
+    top: 310px;
+    left: 88px;
+}
+
+#thin2 {
+    height: 194px;
+    width: 1px;
+    background: white;
+    opacity: 0.30;
+    position: absolute;
+    top: 310px;
+    left: 115px;
+}
+
+#thin3 {
+    height: 233px;
+    width: 1px;
+    background: white;
+    opacity: 0.30;
+    position: absolute;
+    top: 310px;
+    left: 140px;
+}
+
+#symbols {
+    position: absolute;
+    left: 160px;
+    top: 390px;
+    font-family: 'Nunito', sans-serif;
+    color:#FFE1A6;
+    opacity: 0.72;
+}
+
+.flexy{
+    display: flex;
+}
+
+.dots{
+    margin-top: 5px;
+}
+
+.dots2{
+    margin-top: 10px;
+}
+
+.dots3{
+    margin-top: 17px;
+}
+
+.new{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.friend{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.love{
+    font-size: 33px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.story{
+    position: relative;
+}
+
+.story h1{
+    font-size: 24px;
+    color: #FFE1A6;
+    font-weight: 600;
+    opacity: .72;
+    position: absolute;
+    right: 5px;
+    top: -50px;
+}
+
+.titleLine {
+    width: 384px;
+    height: 5px;
+    background: #FFE1A6;
+    opacity: .30;
+    border-radius: 25px;
+}
+
+.story h2{
+    font-size: 60px;
+    font-family: 'Comforter', cursive;
+    color: #F1AA20;
+    font-weight: 400;
+    margin: 10px;
+    margin-left: 43px;
+}
+
+.story h3{
+    font-size: 50px;
+    position: absolute;
+    top: -15px;
+    left: 140px;
+    font-family: 'Comforter', cursive;
+    color: #F1AA20;
+    opacity: .64;
+    font-weight: 400;
+}
+
+.story p{
+    margin-left: 43px;
+    margin-right: 10px;
+    padding-top: 0;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.thin {
+    height: 133px;
+    width: 2px;
+    background: white;
+    opacity: 0.15;
+    position: absolute;
+    top: 5px;
+    left: 5px; 
+    border-radius: 25px; 
+}
+
+.thin2 {
+    height: 194px;
+    width: 2px;
+    background: white;
+    opacity: 0.15;
+    position: absolute;
+    top: 5px;
+    left: 20px; 
+    border-radius: 25px;
+}
+
+.thin3 {
+    height: 233px;
+    width: 2px;
+    background: white;
+    opacity: 0.15;
+    position: absolute;
+    top: 5px;
+    left: 35px;
+    border-radius: 25px;
+}
+
+#muse{
+    position: absolute;
+    top: -15px;
+    left: 200px; 
+}
+
+#pic {
+    position: absolute;
+    top: -15px;
+    left: 110px; 
+}
 
 /* Firgure Styles and Zoom */
 figure {
