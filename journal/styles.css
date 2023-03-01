@@ -69,6 +69,12 @@ main {
     left: 24em;
 }
 
+#pansy {
+    position: absolute;
+    bottom: 8em;
+    left: 21em;
+}
+
 #fuchsia {
     position: absolute;
     bottom: 1.5em;
@@ -94,7 +100,7 @@ figcaption {
 
 .divider {
     margin: 50px;
-    height: 6050px;
+    height: 7050px;
     margin-top: 80px;
     width: 5px;
     border-radius: 25px;
