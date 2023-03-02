@@ -63,7 +63,13 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     word-spacing: 0.15em;
     margin: auto;
-    height: 900px;
+    width: 100vw;
+    height: 110vh;
+    /* position: relative; */
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%); */
 }
 
 @keyframes gradient {
@@ -71,6 +77,13 @@ body {
     50% {background-position: left;}
     100% {background-position: right;}
   }
+
+#center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* Section elements */
 
