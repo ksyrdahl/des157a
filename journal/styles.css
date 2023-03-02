@@ -55,30 +55,35 @@ main{
     position: absolute;
     bottom: 0em;
     left: 18em;
+    opacity: 0;
 }
 
 #baby {
     position: absolute;
     bottom: 2em;
     left: 18em;
+    opacity: 0;
 }
 
 #sakura {
     position: absolute;
     bottom:0em;
     left: 18em;
+    opacity: 0;
 }
 
 #pansy {
     position: absolute;
     bottom: 1em;
     left: 16em;
+    opacity: 0;
 }
 
 #fuchsia {
     position: absolute;
     bottom: -5em;
     left: 16em;
+    opacity: 0;
 }
 
 figure {
