@@ -1,13 +1,13 @@
 body {
-    background: rgb(255,255,255);
-    /* background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(180,172,233,1) 100%); */
+    background-color: (214,210,243,1);
     background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(221,218,245,1) 19%, rgba(214,210,243,1) 35%, rgba(232,230,247,1) 51%, rgba(252,252,252,1) 67%, rgba(232,230,247,1) 80%, rgba(214,210,243,1) 100%);
-    margin: auto;
+    width: 100vw;
 }
 
-main {
-    margin: auto;
+main{
+    width: 1200px;
     display: flex;
+    margin: auto;
 }
 
 #entryContain {
@@ -24,7 +24,7 @@ main {
 .entryNum {
     width: 400px;
     position: relative;
-    padding: 100px;
+    padding-right: 100px;
     padding-top: 200px;
     height:390px;
     position: sticky;
@@ -53,32 +53,32 @@ main {
 
 #poppy {
     position: absolute;
-    bottom: 7em;
-    left: 23em;
+    bottom: 0em;
+    left: 18em;
 }
 
 #baby {
     position: absolute;
-    bottom: 9em;
-    left: 24em;
+    bottom: 2em;
+    left: 18em;
 }
 
 #sakura {
     position: absolute;
-    bottom: 6.5em;
-    left: 24em;
+    bottom:0em;
+    left: 18em;
 }
 
 #pansy {
     position: absolute;
-    bottom: 8em;
-    left: 21em;
+    bottom: 1em;
+    left: 16em;
 }
 
 #fuchsia {
     position: absolute;
-    bottom: 1.5em;
-    left: 22em;
+    bottom: -5em;
+    left: 16em;
 }
 
 figure {
