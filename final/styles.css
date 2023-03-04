@@ -1,0 +1,135 @@
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(167deg, rgba(255,255,255,1) 1%, rgba(252,252,252,1) 5%, rgba(180,172,233,1) 49%, rgba(211,206,242,1) 65%, rgba(243,241,254,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
+    font-family: 'Merriweather Sans', sans-serif;
+    width: 100vw;
+    height: 130vh;
+}
+
+@keyframes gradient {
+    0% {background-position: right;}
+    50% {background-position: left;}
+    100% {background-position: right;}
+}
+
+#center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-45%, -40%);
+}
+
+.flexy h2{
+    font-weight: 800;
+    color: white;
+    background: #6e66a0ca;
+    font-size: 24px;
+    padding: 10px;
+    padding-left: 70px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    word-spacing: 0.15em;
+    position: relative;
+    right: 30px;
+    top: 30px;
+    width: 350px;
+}
+
+.box {
+    align-self: flex-end;
+}
+
+.box h2{
+    font-weight: 800;
+    color: white;
+    background: #6e66a0ca;
+    font-size: 24px;
+    padding: 10px;
+    padding-left: 70px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    word-spacing: 0.15em;
+    position: relative;
+    right: 30px;
+    top: 30px;
+    width: 350px;
+}
+
+
+.flexy {
+    display: flex;
+    gap: 60px;
+}
+
+#line {
+    background: rgba(255, 255, 255, 0.294);
+    width: 580px;
+    border-radius: 25px;
+    height: 30px;
+    position: relative;
+    top: 30px;
+    right: 100px;
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    gap: 40px;
+    width: 850px;
+    margin: auto;
+}
+
+p {
+    font-size: 17.2px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5em;
+    width: 400px;
+    background: #F3F1FE;
+    border-radius: 25px;
+    padding-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #5F5697;
+    padding-bottom: 20px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+#title {
+    background: rgba(255, 255, 255, 0.104);
+    padding: 30px;
+    border-radius: 25px;
+    border-right: solid 10px white;
+}
+
+#title h1{ 
+    text-transform: uppercase; 
+    color: #453f71;
+    font-weight: 1000;
+    font-size: 100px;
+    margin: 0;
+    text-align: center;
+}
+
+#title h2{ 
+    text-transform: uppercase; 
+    color: #453f71e6;
+    font-weight: 500;
+    font-size: 60px;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+#title h3{ 
+    text-transform: uppercase; 
+    color: #453f71af;
+    font-weight: 1000;
+    font-size: 65px;
+    margin: 0;
+    text-align: center;
+}

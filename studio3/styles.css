@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+    color: #7b0b56;
+    padding: 50px;
+    line-height: 1.5em;
+    background: rgb(255,255,255);
+    background: linear-gradient(153deg, rgba(255,255,255,1) 1%, rgba(255,231,251,1) 18%, rgba(255,198,246,1) 29%, rgba(255,222,250,1) 36%, rgba(255,255,255,1) 50%, rgba(255,219,249,1) 61%, rgba(255,200,246,1) 73%, rgba(255,222,250,1) 81%, rgba(255,255,255,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
+    font-family: 'Merriweather Sans', sans-serif;
+    word-spacing: 0.15em;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 1200px;
+}
+
+@keyframes gradient {
+    0% {background-position: right;}
+    50% {background-position: left;}
+    100% {background-position: right;}
+  }
+
+button { 
+    padding: 10px;
+    width: 180px;
+    height: 98px;
+    border-radius: 50px;
+    background: #C974AC;
+    color: white;
+    font-size: 2em;
+    font-family: 'Sue Ellen Francisco', cursive;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: solid 10px #763d63;
+}
+
+
+
+button:hover {
+    border-bottom: solid 3px #763d63;
+    background: #d77eb9;
+  }
+
+#intro {
+    display: flex;
+}
+
+div {
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* #gamecontrol, #score {
+    background-color: aliceblue;
+}
+
+#game {
+    background-color:#eaeaea;
+}
+#actions {
+    background-color: silver;
+} */
