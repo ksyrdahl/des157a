@@ -18,6 +18,8 @@ const player2cats = document.querySelector('#player2cats');
 const gameboard = document.querySelector('#gameboard');
 const player1cat = document.querySelector('#player1cat');
 const player2cat = document.querySelector('#player2cat');
+const shuffle = new Audio('audio/shuffle.m4a');
+const meow = new Audio('audio/meow.m4a');
 const gameData = {
     dice: ['images/dice1.svg', 'images/dice2.svg', 'images/dice3.svg', 'images/dice4.svg', 'images/dice5.svg', 'images/dice6.svg'],
     players: ['player 1', 'player 2'],
@@ -60,6 +62,7 @@ startGame.addEventListener('click',function(event){
                     player1cat.innerHTML = `<img src="images/${event.target.id}.svg">`;
                     player1cats.className = 'hidden';
                     player2cats.className = 'showing';
+                    meow.play();
                 } else {
                     // player 2's data is at position 1
                     gameData.whichCat[1] = event.target.id;
@@ -69,6 +72,7 @@ startGame.addEventListener('click',function(event){
                     gameboard.className = 'showing';
                     document.getElementById('overlay').className = 'hidden';
                     document.getElementById('intro').className = 'hidden';
+                    meow.play();
                     // console.log("set up the turn!");
                     setUpTurn();
                 }
@@ -86,7 +90,7 @@ startGame.addEventListener('click',function(event){
             document.getElementById('roll').addEventListener('click', function(){
                 throwDice();
                 // console.log("roll the dice!");
-        
+                    shuffle.play();
             });
         }
         
