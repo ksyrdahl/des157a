@@ -18,8 +18,8 @@ const player2cats = document.querySelector('#player2cats');
 const gameboard = document.querySelector('#gameboard');
 const player1cat = document.querySelector('#player1cat');
 const player2cat = document.querySelector('#player2cat');
-const shuffle = new Audio('audio/shuffle.m4a');
-const meow = new Audio('audio/meow.m4a');
+const shuffle = new Audio('sounds/shuffle.mp3');
+const meow = new Audio('sounds/meow.mp3');
 const gameData = {
     dice: ['images/dice1.svg', 'images/dice2.svg', 'images/dice3.svg', 'images/dice4.svg', 'images/dice5.svg', 'images/dice6.svg'],
     players: ['player 1', 'player 2'],
@@ -80,8 +80,8 @@ startGame.addEventListener('click',function(event){
         }
 
         function setUpTurn() {
-            instruct.innerHTML = `<h2>Roll the dice for <strong>${gameData.players[gameData.index]}</strong></h2>`;
-            actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+            instruct.innerHTML = `<h2>Pick a card for <strong>${gameData.players[gameData.index]}</strong></h2>`;
+            actionArea.innerHTML = '<button id="roll">Pick a Card</button>';
             game1.innerHTML = '';
             game2.innerHTML = '';
             sum.innerHTML = '';
@@ -100,7 +100,7 @@ startGame.addEventListener('click',function(event){
             gameData.roll1 = Math.floor(Math.random() * 6) + 1;
             gameData.roll2 = Math.floor(Math.random() * 6) + 1;
         
-            instruct.innerHTML = `<h2>Roll the dice for the ${gameData.players[gameData.index]}<h2>`;
+            instruct.innerHTML = `<h2>Pick a card for the ${gameData.players[gameData.index]}<h2>`;
         
             // put the dice images on the screen; the dice array index needs to be one less than roll1 and roll2
             game1.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}">`;
@@ -132,7 +132,7 @@ startGame.addEventListener('click',function(event){
                 console.log('one of the two dice was a 1');
                 // switch player
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-                instruct.innerHTML += `<h3>Sorry, one of your rolls was a  one, switching to ${gameData.players[gameData.index]}</h3>`;
+                instruct.innerHTML += `<h3>Sorry, one of your cards was a  one, switching to ${gameData.players[gameData.index]}</h3>`;
         
                 setTimeout (setUpTurn, 2000);
             }
@@ -142,7 +142,7 @@ startGame.addEventListener('click',function(event){
                 console.log('the game proceeds');
         
                 gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-                actionArea.innerHTML = '<button id="rollagain">Roll again</button> <div id=line3><div> <button id="pass">Pass</button>';
+                actionArea.innerHTML = '<button id="rollagain">Pick Again</button> <div id=line3><div> <button id="pass">Pass</button>';
         
                 document.getElementById('rollagain').addEventListener('click', function(){
                     setUpTurn();
