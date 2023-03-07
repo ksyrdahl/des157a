@@ -176,8 +176,8 @@ startGame.addEventListener('click',function(event){
         }
         
         function showCurrentScore() {
-            score1.innerHTML = `<h1>Score:</h1><p> ${gameData.score[1]}</p>`;
-            score2.innerHTML = `<h1>Score:</h1><p> ${gameData.score[0]}</p>`;
+            score1.innerHTML = `<h1>Score:</h1><p> ${gameData.score[0]}</p>`;
+            score2.innerHTML = `<h1>Score:</h1><p> ${gameData.score[1]}</p>`;
         }
         // ${gameData.players[1]}
         // ${gameData.players[0]}
