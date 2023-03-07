@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +12,65 @@
 	<link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <main>
-        <div id="intro">
-            <img src="images/minnie.svg" alt="Gray and White fluffy Cat" id="minnie" height="500">
-            <section id="introtext">
-                <h1>Game of PIG</h1>
-                <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
-                <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
-                <div id="gamecontrol">
-                    <button id="startgame">Start Game</button>
-                </div>
-            </section>
+    <section id="intro" class="showing">
+        <div id="circle"></div>
+            <img src="images/allcats.svg" alt="Four Cats" id="allcats" height="500" width="500">
+        
+        <div class="introText">
+            <h1>House of Cats</h1>
+            <p>There are too many cats in this house and they're bursting with energy. Help us get rid of some of their energy and choose which cat you want to play with. To avoid absolute chaos you can only play with two cats at a time. The cat whose turn it is picks two cards. The total of the cards is added to the current cats's score, unless either card comes up as a "one". If this happens, this cat's turn is over, and it is the other cats's turn. After each roll, the current cat can either pick a card again, (assuming a "one" was not drawn) or if the current cat feels tired, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+            <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don't do that.</p>
         </div>
+    </section>
 
-        <div id="game"></div>
+    <div id="gamecontrol">
+        <button id="startgame">Start Game</button>
+    </div>
+
+    <div id="overlay" class="hidden">
+        <section id="player1cats" class="showing">
+            <section>
+                <h2>Cat 1:</h2>
+                <h3>Pick your first Cat!</h3>
+            </section>
+                <div><img src="images/cat1.svg" alt="Four Cats" id="cat1" class="cats" height="300" width="300"></div>
+                <div><img src="images/cat2.svg" alt="Four Cats" id="cat2" class="cats" height="300" width="300"></div>
+                <div><img src="images/cat3.svg" alt="Four Cats" id="cat3" class="cats" height="300" width="300"></div>
+                <div><img src="images/cat4.svg" alt="Four Cats" id="cat4" class="cats" height="300" width="300"></div>
+        </section>
+
+        <section id="player2cats" class="hidden">
+            <section>
+                <h2>Cat 2:</h2>
+                <h3>Pick your second Cat!</h3>
+            </section>
+            <div><img src="images/cat5.svg" alt="Four Cats" id="cat5" class="cats" height="300" width="300"></div>
+            <div><img src="images/cat6.svg" alt="Four Cats" id="cat6" class="cats" height="300" width="300"></div>
+            <div><img src="images/cat7.svg" alt="Four Cats" id="cat7" class="cats" height="300" width="300"></div>
+            <div><img src="images/cat8.svg" alt="Four Cats" id="cat8" class="cats" height="300" width="300"></div>
+        </section>
+    </div>
+
+    <section id="maingame">
+        <section id="gameboard" class="hidden">
+            <div id="player1cat"></div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="game1"></div>
+            <div id="sum"></div>
+            <div id="game2"></div>
+            <div id="player2cat"></div>
+        </section>
+        <section id="score">
+            <div id="score1"></div>
+            <div id="instruct"></div>
+            <div id="score2"></div>
+        </section>
         <div id="actions"></div>
-        <div id="score"></div>
-    </main>
 
+    </section>
 </body>
+
 </html>
