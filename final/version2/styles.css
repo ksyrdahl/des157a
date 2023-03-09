@@ -1,0 +1,432 @@
+body {
+    color: #7b0b56;
+    line-height: 1.5em;
+    background: rgb(255,255,255);
+    background: linear-gradient(153deg, rgba(255,255,255,1) 1%, rgba(255,231,251,1) 18%, rgba(255,198,246,1) 29%, rgba(255,222,250,1) 36%, rgba(255,255,255,1) 50%, rgba(255,219,249,1) 61%, rgba(255,200,246,1) 73%, rgba(255,222,250,1) 81%, rgba(255,255,255,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
+    font-family: 'Merriweather Sans', sans-serif;
+    word-spacing: 0.15em;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 1200px;
+}
+
+@keyframes gradient {
+    0% {background-position: right;}
+    50% {background-position: left;}
+    100% {background-position: right;}
+}
+
+button { 
+    padding: 10px;
+    width: 180px;
+    height: 98px;
+    border-radius: 50px;
+    background: #C974AC;
+    color: white;
+    font-size: 2em;
+    font-family: 'Sue Ellen Francisco', cursive;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: solid 10px #763d63;
+}
+
+button:hover {
+    border-bottom: solid 3px #763d63;
+    background: #d77eb9;
+    cursor:pointer;
+}
+
+
+h1{
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 6em;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    width: 500px;
+}
+
+#player1cats img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    margin-top: 25px;
+}
+
+#player1cats {
+    height: 750px;
+    width: 1200px;
+    margin: auto;
+}
+
+#player2cats {
+    height: 750px;
+    width: 1200px;
+    margin: auto;
+}
+
+#player1cats div {
+    background:#763d6324;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: 35%;
+    left: 6%;
+    margin: 5px;
+}
+
+#player1cats div:hover{
+    background:#ffffff96; 
+}
+
+#player2cats img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    margin-top: 25px;
+}
+
+#player2cats div {
+    background:#763d6324;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: 35%;
+    left: 6%;
+    margin: 5px;
+}
+
+#player2cats div:hover{
+    background:#ffffff96; 
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.showing {
+    display: flex;
+    opacity: 1;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+#intro{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#allcats{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 55px;
+    left: 15px;
+}
+
+#startgame{
+    position: absolute;
+    top: 80%;
+    left: 52%;
+}
+
+#circle {
+    background:#763d63;
+    border-radius: 50%;
+    width: 540px;
+    height: 540px;
+    opacity: .2;
+}
+
+#overlay h2{
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 100px; 
+    position: absolute;
+    left: 28%;
+    top: 18%;
+    text-transform: uppercase;
+}
+
+#overlay h3{
+    font-size: 45px; 
+    position: absolute;
+    font-weight: 100;
+    left: 49%;
+    top: 23%;
+    padding-left: 20px;
+}
+
+#overlay {
+    position: absolute;
+    background: linear-gradient(153deg, rgba(255,255,255,1) 1%, rgba(255,231,251,1) 18%, rgba(255,198,246,1) 29%, rgba(255,222,250,1) 36%, rgba(255,255,255,1) 50%, rgba(255,219,249,1) 61%, rgba(255,200,246,1) 73%, rgba(255,222,250,1) 81%, rgba(255,255,255,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
+    word-spacing: 0.15em;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* transition-property: display;
+    transition-duration: 1s;
+    transition-timing-function: ease; */
+}
+
+#winscreen {
+    position: absolute;
+    background: linear-gradient(153deg, rgba(255,255,255,1) 1%, rgba(255,231,251,1) 18%, rgba(255,198,246,1) 29%, rgba(255,222,250,1) 36%, rgba(255,255,255,1) 50%, rgba(255,219,249,1) 61%, rgba(255,200,246,1) 73%, rgba(255,222,250,1) 81%, rgba(255,255,255,1) 100%);
+    background-size: 500%;
+    animation: gradient 30s infinite;
+    word-spacing: 0.15em;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 115vh;
+}
+
+#player1cat {
+    padding: 20px;
+    border-radius: 50%;
+    background: #fcf5fb;
+    border-top: solid 35px #FFD4F6;
+    border-left: solid 20px #FFD4F6;
+    border-right: solid 20px #FFD4F6;
+    width: 170px;
+    height: 170px;
+}
+
+
+/* box-shadow: 5px 5px 31px 5px rgba(246,181,120,1); */
+
+#player2cat {
+    padding: 20px;
+    border-radius: 50%;
+    background: #fcf5fb;
+    border-top: solid 35px #FFD4F6;
+    border-left: solid 20px #FFD4F6;
+    border-right: solid 20px #FFD4F6;
+    width: 170px;
+    height: 170px;
+}
+
+#overlay h4{
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    background: #C974AC;
+    padding: 20px;
+    border-radius: 40px;
+    width: 100px;
+    color: white;
+    border-bottom: solid 10px #763d63;
+}
+
+#overlay h4:hover {
+    border-bottom: solid 3px #763d63;
+    background: #d77eb9;
+    cursor:pointer;
+}
+
+#maingame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+#score {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    height: 143px;
+}
+
+#score h1{
+    font-size: 40px;
+    color: #C974AC;
+}
+
+#score p{
+    font-size: 50px;
+    font-weight: 800;
+    color: #C974AC;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    padding-top: 30px;
+    box-shadow: 0px 4px 9px 0px rgba(201,116,172,1);
+    margin: 0;
+}
+
+#score1 {
+    display: flex;
+    gap: 10px;
+}
+
+#score2 {
+    display: flex;
+    gap: 10px;
+}
+
+#line1 {
+    width: 200px;
+    height: 4px;
+    background: #F6B578;
+    opacity: .47;
+    position: absolute;
+    z-index: -1;
+    border-radius: 25px;
+    top: 35%;
+    left: 20%;
+}
+#line2 {
+    width: 200px;
+    height: 4px;
+    background: #F6B578;
+    opacity: .47;
+    position: absolute;
+    z-index: -1;
+    border-radius: 25px;
+    top: 35%;
+    left: 64%;
+}
+
+#game1 {
+    width: 200px;
+    height: 283px;
+    border-radius: 25px;
+    background: white;
+    margin-right: 30px;
+    box-shadow: 0px 4px 9px 0px rgba(129, 129, 129, 0.433);
+    transition: ease-in .5s;
+}
+
+#game2 {
+    width: 200px;
+    height: 283px;
+    border-radius: 25px;
+    background: white;
+    margin-left: 30px;
+    box-shadow: 0px 4px 9px 0px rgba(129, 129, 129, 0.433);
+    transition: ease-in .5s;
+}
+
+#gameboard {
+    gap: 40px;
+}
+
+#sum {
+    font-size: 128px;
+    color: #F8D0AC;
+    position: absolute;
+    left: 41%;
+    top: -5%;
+    text-shadow: 2px 2px #aa794b;
+    width: 200px;
+    text-align: center;
+}
+
+#player1catName {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #F8D0AC;
+    position: relative;
+    left: 2%;
+    top: -15px;
+    text-shadow: 2px 2px #aa794b;
+    width: 200px;
+    text-align: center;
+}
+
+#player2catName {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #F8D0AC;
+    position: relative;
+    left: 60%;
+    top: -15px;
+    text-shadow: 2px 2px #aa794b;
+    width: 200px;
+    text-align: center;
+}
+
+#names {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#snake {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    line-height: 2em;
+    position: absolute;
+    bottom:320px;
+    left: 285px;
+    color: #aa794b;
+    background-color: rgba(255, 255, 255, 0.813);
+    /* text-shadow: 2px 2px #aa794b;  */
+    width: 500px;
+    border-radius: 25px;
+    border: solid #aa794b 5px;
+}
+
+
+#actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#instruct {
+    width: 450px;
+    text-align: center;
+}
+
+.line3 {
+    height: 175px;
+    width: 4px;
+    color: #c974ad71;
+}
+
+#score h2{
+    font-weight: 100;
+    padding-top: 30px;
+}
+
+#score h3{
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+#quit{
+    margin: 50px;
+}
