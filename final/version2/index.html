@@ -8,26 +8,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
     <title>Game of PIG</title>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-	<link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <section id="intro" class="showing">
         <div id="circle"></div>
-            <img src="images/allcats.svg" alt="Four Cats" id="allcats" height="500" width="500">
-        
+        <img src="images/allcats.svg" alt="Four Cats" id="allcats" height="500" width="500">
+
         <div class="introText">
             <h1>House of Cats</h1>
-            <p>There are too many cats in this house and they're bursting with energy. Help us get rid of some of their energy and choose which cat you want to play with. To avoid absolute chaos you can only play with two cats at a time. The cat whose turn it is picks two cards. The total of the cards is added to the current cats' score, unless either card comes up as a "cat eyes." If this happens, this cat's turn is over, and it is the other cats' turn. After each roll, the current cat can either pick a card again (assuming a "one" was not drawn), or if the current cat feels tired, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
-            <p>Oh, and if you roll two "cat eyes", your current score gets zeroed out. So don't do that.</p>
+            <p>There are too many cats in this house and they're bursting with energy. Help us get rid of some of their energy and choose which cat you want to play with to compete against your friend. During their turn one cat picks two cards. The cards have points ranging from 2-6. The total number drawn from the cards is then added to the current cats' score, unless either card is a "cat eye." If this happens, this cat's turn is over, and it is the other cats' turn.</p>
+            <p>Oh, and if you roll two sets of "cat eyes", your current score gets zeroed out. So you want to avoid getting double "cat eyes." After each draw, the current cat can choose to pick a card again assuming "cat eyes" were not drawn. However, if you feel your cat might draw "cat eyes," you can also choose to pass to the other player so your score isn't zeroed out. The first player to get 30 points or higher wins</p>
         </div>
     </section>
 
     <div id="gamecontrol">
         <button id="startgame">Start Game</button>
     </div>
+
+    <button id="help" class="hidden">?</button>
+        
+        <div id="rules" class="hidden">
+            <section>
+                <h1>Rules</h1>
+                <p>There are too many cats in this house and they're bursting with energy. Help us get rid of some of their energy and choose which cat you want to play with to compete against your friend. During their turn one cat picks two cards. The cards have points ranging from 2-6. The total number drawn from the cards is then added to the current cats' score, unless either card is a "cat eye." If this happens, this cat's turn is over, and it is the other cats' turn.</p>
+                <p>Oh, and if you roll two sets of "cat eyes", your current score gets zeroed out. So you want to avoid getting double "cat eyes." After each draw, the current cat can choose to pick a card again assuming "cat eyes" were not drawn. However, if you feel your cat might draw "cat eyes," you can also choose to pass to the other player so your score isn't zeroed out. The first player to get 30 points or higher wins</p>
+            </section>
+            <button id="close">x</button>
+         </div>
+        
 
     <div id="overlay" class="hidden">
         <section id="player1cats" class="showing">
@@ -58,22 +70,22 @@
                 <h2>Player 2:</h2>
                 <h3>Pick your Cat!</h3>
             </section>
-                <div>
-                    <img src="images/cat5.svg" alt="Four Cats"  class="cats" height="300" width="300">
-                    <h4 id="cat5" class="catName">Uni</h4>
-                </div>
-                <div>
-                    <img src="images/cat6.svg" alt="Four Cats" class="cats" height="300" width="300">
-                    <h4 id="cat6" class="catName">Shake</h4>
-                </div>
-                <div>
-                    <img src="images/cat7.svg" alt="Four Cats" class="cats" height="300" width="300">
-                    <h4 id="cat7" class="catName">Tara</h4>
-                </div>
-                <div>
-                    <img src="images/cat8.svg" alt="Four Cats" class="cats" height="300" width="300">
-                    <h4 id="cat8" class="catName">Minnie</h4>
-                </div>
+            <div>
+                <img src="images/cat5.svg" alt="Four Cats" class="cats" height="300" width="300">
+                <h4 id="cat5" class="catName">Uni</h4>
+            </div>
+            <div>
+                <img src="images/cat6.svg" alt="Four Cats" class="cats" height="300" width="300">
+                <h4 id="cat6" class="catName">Shake</h4>
+            </div>
+            <div>
+                <img src="images/cat7.svg" alt="Four Cats" class="cats" height="300" width="300">
+                <h4 id="cat7" class="catName">Tara</h4>
+            </div>
+            <div>
+                <img src="images/cat8.svg" alt="Four Cats" class="cats" height="300" width="300">
+                <h4 id="cat8" class="catName">Minnie</h4>
+            </div>
         </section>
     </div>
 
@@ -102,6 +114,10 @@
     </section>
 
     <section id="winscreen" class="hidden">
+        <!-- from glenda: added <p> here for winner's name -->
+        <p id="winner"></p>
+        <img src="images/stars.svg" alt="Stars" class="stars" height="600" width="600">
+        <div id="winline"></div>
         <button id="newGame">New Game?</button>
     </section>
 </body>

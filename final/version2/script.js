@@ -23,6 +23,9 @@ const player2catName = document.querySelector('#player2catName');
 const gameboard = document.querySelector('#gameboard');
 const player1cat = document.querySelector('#player1cat');
 const player2cat = document.querySelector('#player2cat');
+const help = document.querySelector('#help');
+const close = document.querySelector('#close');
+// const winner = document.getElementById('#winner');
 const shuffle = new Audio('sounds/shuffle.mp3');
 const meow = new Audio('sounds/meow.mp3');
 const cutemeow = new Audio('sounds/cutemeow.mp3');
@@ -46,7 +49,7 @@ startGame.addEventListener('click',function(event){
     document.getElementById('overlay').className = 'showing';
     // randomly set index
     gameData.index = Math.round(Math.random());
-    console.log(`index: ${gameData.index}`);
+    // console.log(`index: ${gameData.index}`);
     cutemeow.play();
 
     gameControl.innerHTML = '<h2>The Game Has Started<h2>';
@@ -62,26 +65,28 @@ startGame.addEventListener('click',function(event){
 
         for (const cat of catName) {
             cat.addEventListener('click', function (event) {
-                console.log(event.target.id);
-                console.log(event.target.innerHTML);
+                // console.log(event.target.id);
+                // console.log(event.target.innerHTML);
                 // if player1cats section is showing
                 if (player1cats.getAttribute('class') == 'showing') {
                     // player 1's data is at position 0
                     gameData.whichCat[0] = event.target.id;
                     gameData.name[0] = event.target.innerHTML;
-                    console.log(gameData.whichCat);
-                    console.log(gameData.name);
+                    // console.log(gameData.whichCat);
+                    console.log(`Cat name 1: ${gameData.name[0]}`);
                     player1cat.innerHTML = `<img src="images/${event.target.id}.svg">`;
                     player1catName.innerHTML = `${event.target.innerHTML}`;
                     player1cats.className = 'hidden';
                     player2cats.className = 'showing';
+                    document.querySelector('#player2cats').style.animation ='opac .5s';
                     meow3.play();
                 } else {
                     // player 2's data is at position 1
                     gameData.whichCat[1] = event.target.id;
-                    gameData.name[0] = event.target.innerHTML;
-                    console.log(gameData.whichCat);
-                    console.log(gameData.name);
+                    // from glenda: updated the index from 0 to 1
+                    gameData.name[1] = event.target.innerHTML;
+                    // console.log(gameData.whichCat);
+                    console.log(`Cat name 2: ${gameData.name[1]}`);
                     player2cat.innerHTML += `<img src="images/${event.target.id}.svg">`;
                     player2catName.innerHTML = `${event.target.innerHTML}`;
                     player2cats.className = 'hidden';
@@ -89,13 +94,29 @@ startGame.addEventListener('click',function(event){
                     names.className = 'showing';
                     document.getElementById('overlay').className = 'hidden';
                     document.getElementById('intro').className = 'hidden';
+                    document.getElementById('help').className = 'showing';
                     cutemeow.play();
+                    document.querySelector('#maingame').style.animation ='opac 1s';
                     // console.log("set up the turn!");
                     setUpTurn();
                     showCurrentScore(); 
                 }
             })
         }
+
+        help.addEventListener ('click', function (event) {
+            document.getElementById('rules').className = 'showing'; 
+        })
+
+        close.addEventListener ('click', function (event) {
+            document.getElementById('rules').className = 'hidden'; 
+        })
+
+        document.addEventListener('keydown', function (event){
+            if (event.key === 'Escape') {
+                document.getElementById('rules').className = 'hidden';
+            }
+        });
 
         function setUpTurn() {
             instruct.innerHTML = `<h2>Pick a card for <strong>${gameData.players[gameData.index]}</strong></h2>`;
@@ -106,7 +127,7 @@ startGame.addEventListener('click',function(event){
                 player2cat.style.boxShadow = "none"; 
             }
             else {
-                player2cat.style.boxShadow = "5px 5px 31px 5px rgba(246,181,120,1)";
+                player2cat.style.boxShadow = "5px 5px 31px 5px rgba(199, 55, 158, 0.548)" ;
                 player1cat.style.boxShadow = "none";  
             }
 
@@ -157,7 +178,7 @@ startGame.addEventListener('click',function(event){
                 // show the current score
                 showCurrentScore(); 
                 meow.play();
-                setTimeout(setUpTurn, 2000);
+                setTimeout(setUpTurn, 3000);
             }
         
             // if either die is a one
@@ -170,7 +191,7 @@ startGame.addEventListener('click',function(event){
 
                 score.style.paddingBottom = '90px';
 
-                setTimeout (setUpTurn, 2000);
+                setTimeout (setUpTurn, 3000);
                 meow.play();
             }
         
@@ -180,7 +201,7 @@ startGame.addEventListener('click',function(event){
         
                 gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
                 actionArea.innerHTML = '<button id="rollagain">Pick Again</button> <div id=line3><div> <button id="pass">Pass</button>';
-                instruct.innerHTML = `<h2>Yay you're score has increased!</h2>`;
+                instruct.innerHTML = `<h2>Yay you're score has INCREASED!</h2>`;
 
                 document.getElementById('rollagain').addEventListener('click', function(){
                     setUpTurn();
@@ -199,15 +220,22 @@ startGame.addEventListener('click',function(event){
         function checkWinningCondition(){
             if(gameData.score[gameData.index] > gameData.gameEnd){
                 document.getElementById('winscreen').className = 'showing';
-                
+                console.log(gameData.name[gameData.index]);
+
+                // from glenda: added this code.
+                winscreen.innerHTML += `<img src="images/${gameData.whichCat[gameData.index]}.svg">`;
+                winscreen.innerHTML += `<h1>${gameData.name[gameData.index]} wins!</h1>`;
+                winscreen.innerHTML += `<h2> with ${gameData.score[gameData.index]} points!</h2>`;
+
                 actionArea.innerHTML = '';
                 document.getElementById('newGame').addEventListener("click", function(){
                     location.reload();
                 });
 
-                score.innerHTML = `<h1>${gameData.players[gameData.index]}
-                wins</h1>`;
-                score.innerHTML = `with ${gameData.score[gameData.index]} points!`;
+                // winner.innerHTML = `<h1>${gameData.player[gameData.index]}
+                // wins</h1>`;
+                // winner.innerHTML = `with ${gameData.score[gameData.index]} points!`;
+                
             }
         
             else{

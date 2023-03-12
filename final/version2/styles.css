@@ -47,6 +47,7 @@ h1{
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 6em;
     text-transform: uppercase;
+    margin-top: 30px;
 }
 
 p {
@@ -85,7 +86,8 @@ p {
 }
 
 #player1cats div:hover{
-    background:#ffffff96; 
+    background:#ffffff96;
+    box-shadow: 5px 5px 31px 5px rgba(246,181,120,1); 
 }
 
 #player2cats img {
@@ -107,7 +109,8 @@ p {
 }
 
 #player2cats div:hover{
-    background:#ffffff96; 
+    background:#ffffff96;
+    box-shadow: 5px 5px 31px 5px rgba(199, 55, 158, 0.548);  
 }
 
 .hidden {
@@ -132,7 +135,85 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+#help {
+    background: #e09b5b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    border: 0;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    padding-left: 15px;
+    border-bottom: solid 5px #aa794b;
+}
+
+#help:hover{
+   border-bottom: solid 1px #aa794b; 
+}
+
+#rules{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.541);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    flex-direction: column;
+}
+
+#rules section{
+    position: absolute;
+    background: white;
+    word-spacing: 0.15em;
+    padding: 30px;
+    top: 15%;
+    left: 32%;
+    width: 30vw;
+    height: 65vh;
+    z-index: 1;
+    border: solid 6px #e09b5b; 
+    border-radius: 25px; 
+}
+
+#rules h1{
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0px 5px #aa794b;
+    color: #e09b5b; 
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#rules p{
+    color: #aa794b;
+    width: 29vw;
+    font-size: 15px; 
+}
+
+#close {
+    background: #C974AC;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 13%;
+    right: 32%;
+    border: 0;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    border-bottom: solid 5px #763d63;
+    z-index: 1;  
+}
+
+#close:hover{
+    border-bottom: solid 1px #763d63;
 }
 
 #allcats{
@@ -145,7 +226,7 @@ img {
 
 #startgame{
     position: absolute;
-    top: 80%;
+    top: 81%;
     left: 52%;
 }
 
@@ -160,10 +241,22 @@ img {
 #overlay h2{
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 100px; 
+    width: 320px;
+    text-align: center;
+    height: 2px;
     position: absolute;
-    left: 28%;
+    left: 24%;
     top: 18%;
     text-transform: uppercase;
+    border-radius: 25px;
+}
+
+#player2cats h2{
+    box-shadow: 5px 5px 31px 5px rgb(248, 41, 189);
+}
+
+#player1cats h2{
+    box-shadow: 5px 5px 31px 5px rgb(239, 144, 56); 
 }
 
 #overlay h3{
@@ -185,6 +278,8 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
+    animation: opac 1s ;
+    transition: ease-in-out;
     /* transition-property: display;
     transition-duration: 1s;
     transition-timing-function: ease; */
@@ -199,7 +294,81 @@ img {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 115vh;
+    height: 110vh;
+    animation: opac 1s ;
+    transition: ease-in-out;
+    /* display: block; */
+}
+
+@keyframes opac{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#winscreen h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #F8D0AC;
+    width: 700px;
+    text-shadow: 2px 2px #aa794b;
+    font-family: 'Montserrat', sans-serif;
+    position:absolute;
+    top: 40%;
+    right: 3%;
+    animation: wintext 2s ;
+    transition: ease-in-out;
+}
+
+#winscreen h2{
+    font-size: 50px;
+    color: #C974AC;
+    width: 700px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+    position:absolute;
+    top: 53%;
+    right: 3%;
+    animation: wintext 2s ;
+    transition: ease-in-out;
+}
+
+@keyframes wintext{
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+#winscreen img {
+    width: 45%;
+    position:absolute;
+    animation: wincat 2s ;
+    transition: ease-in-out;
+    left: 5%;
+    top: 10%;
+}
+
+@keyframes wincat{
+    from {top: -70%;}
+    to {top: 10%;}
+}
+
+#newGame{
+    position:absolute;
+    top: 70%;
+    right: 21%;
+    animation: wintext 2s ;
+    transition: ease-in-out;
+}
+
+#winline {
+    background:#F8D0AC;
+    opacity: 70%;
+    width: 600px;
+    height: 5px;
+    border-radius: 25px;
+    position:absolute;
+    top: 54%;
+    right:7%;
 }
 
 #player1cat {
@@ -212,9 +381,6 @@ img {
     width: 170px;
     height: 170px;
 }
-
-
-/* box-shadow: 5px 5px 31px 5px rgba(246,181,120,1); */
 
 #player2cat {
     padding: 20px;
@@ -385,6 +551,7 @@ img {
     text-align: center;
     margin: auto;
     text-transform: uppercase;
+    text-align: center;
     line-height: 2em;
     position: absolute;
     bottom:320px;
