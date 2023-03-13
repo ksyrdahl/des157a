@@ -145,6 +145,7 @@ img {
     position: absolute;
     top: 7%;
     right: 10%;
+    z-index: 1;
     border: 0;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
@@ -541,6 +542,19 @@ img {
     text-align: center;
 }
 
+#pass {
+    color:#C974AC;
+    background: white;
+    border: solid .5px #C974AC;
+    border-bottom: solid 10px #C974AC;
+}
+
+#pass:hover {
+    border-bottom: solid 3px #C974AC;
+    background: #fcf4fa;
+    cursor:pointer;
+}
+
 #names {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -548,20 +562,25 @@ img {
 
 #snake {
     font-size: 20px;
-    text-align: center;
-    margin: auto;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
     line-height: 2em;
     position: absolute;
-    bottom:320px;
-    left: 285px;
+    bottom:10%;
+    left: 26.5%;
     color: #aa794b;
     background-color: rgba(255, 255, 255, 0.813);
     /* text-shadow: 2px 2px #aa794b;  */
     width: 500px;
     border-radius: 25px;
     border: solid #aa794b 5px;
+}
+
+#snake h3{
+    margin: auto;
 }
 
 
@@ -596,4 +615,6 @@ img {
 
 #quit{
     margin: 50px;
+    position: absolute;
+    z-index: 1;
 }

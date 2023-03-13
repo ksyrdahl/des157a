@@ -54,6 +54,7 @@ startGame.addEventListener('click',function(event){
 
     gameControl.innerHTML = '<h2>The Game Has Started<h2>';
     gameControl.innerHTML = '<button id="quit">Quit Game?</button>';
+    document.getElementById('help').className = 'showing';
 
     document.getElementById('quit').addEventListener("click", function(){
         location.reload();
@@ -94,7 +95,6 @@ startGame.addEventListener('click',function(event){
                     names.className = 'showing';
                     document.getElementById('overlay').className = 'hidden';
                     document.getElementById('intro').className = 'hidden';
-                    document.getElementById('help').className = 'showing';
                     cutemeow.play();
                     document.querySelector('#maingame').style.animation ='opac 1s';
                     // console.log("set up the turn!");
@@ -171,6 +171,7 @@ startGame.addEventListener('click',function(event){
                 snake.innerHTML += '<h3>Oh snap! Cat Eyes!</h3>';
                 gameData.score[gameData.index] = 0;
                 document.getElementById('snake').className = 'showing';
+                instruct.innerHTML = '';
                 // switch players
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 score.style.paddingBottom = '90px';
@@ -188,6 +189,7 @@ startGame.addEventListener('click',function(event){
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 snake.innerHTML += `<h3>Sorry, one of your cards was a  one, switching to ${gameData.players[gameData.index]}</h3>`;
                 document.getElementById('snake').className = 'showing';
+                instruct.innerHTML = '';
 
                 score.style.paddingBottom = '90px';
 
@@ -201,7 +203,7 @@ startGame.addEventListener('click',function(event){
         
                 gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
                 actionArea.innerHTML = '<button id="rollagain">Pick Again</button> <div id=line3><div> <button id="pass">Pass</button>';
-                instruct.innerHTML = `<h2>Yay you're score has INCREASED!</h2>`;
+                instruct.innerHTML = `<h2>Yay you're score has <strong>INCREASED</strong>!</h2>`;
 
                 document.getElementById('rollagain').addEventListener('click', function(){
                     setUpTurn();
@@ -221,6 +223,8 @@ startGame.addEventListener('click',function(event){
             if(gameData.score[gameData.index] > gameData.gameEnd){
                 document.getElementById('winscreen').className = 'showing';
                 console.log(gameData.name[gameData.index]);
+                document.getElementById('help').className = 'hidden';
+                document.getElementById('quit').className = 'hidden';
 
                 // from glenda: added this code.
                 winscreen.innerHTML += `<img src="images/${gameData.whichCat[gameData.index]}.svg">`;
