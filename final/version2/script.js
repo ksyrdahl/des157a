@@ -31,6 +31,7 @@ const meow = new Audio('sounds/meow.mp3');
 const cutemeow = new Audio('sounds/cutemeow.mp3');
 const meow3 = new Audio('sounds/meow3.mp3');
 const meow2 = new Audio('sounds/meow2.mp3');
+const squeak = new Audio('sounds/squeak.mp3');
 const gameData = {
     dice: ['images/dice1.svg', 'images/dice2.svg', 'images/dice3.svg', 'images/dice4.svg', 'images/dice5.svg', 'images/dice6.svg'],
     whichCat: ['', ''],
@@ -225,6 +226,9 @@ startGame.addEventListener('click',function(event){
                 console.log(gameData.name[gameData.index]);
                 document.getElementById('help').className = 'hidden';
                 document.getElementById('quit').className = 'hidden';
+
+                squeak.play();
+                cutemeow.play();
 
                 // from glenda: added this code.
                 winscreen.innerHTML += `<img src="images/${gameData.whichCat[gameData.index]}.svg">`;
