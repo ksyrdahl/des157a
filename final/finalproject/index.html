@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+    <title>Final: Version 2</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section id="intro" class="showing">
+        <div id="circle"></div>
+        <img src="images/allcats.svg" alt="Four Cats" id="allcats" height="500" width="500">
+
+        <div class="introText">
+            <h1>House of Cats</h1>
+                <p id="info">There are too many cats in this house and they're bursting with energy. Help us get rid of some of their energy and choose which cat you want to play with to compete against your friend.</p>
+            <div id="introline"></div>
+            <div id="text">
+                <h2>Rules of Play</h2>
+                <ol type="1">
+                    <li>Pick <strong>two cards</strong>. The <strong>total</strong> will be added to your score and you <strong>pick again</strong>.</li>
+                    <li>However, if you draw <strong>one "cat eye,"</strong> your <strong>turn is over</strong>.</li>
+                    <li>If both cards are <strong>"cat eyes,"</strong> your turn is over and your score <strong>zeroes out</strong>.</li>
+                    <li>After each turn, you can either <strong>draw again</strong> or <strong>pass</strong> if you're worried you might draw two “cat eyes.”</li>
+                    <li>The first player to <strong>30 points</strong> or more <strong>wins</strong>!</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <div id="gamecontrol">
+        <button id="startgame">Start Game</button>
+    </div>
+
+    <button id="help" class="hidden">?</button>
+        
+        <div id="rules" class="hidden">
+            <section>
+                <h1>Rules</h1>
+                <ol type="1">
+                    <li>Pick <strong>two cards</strong>. The <strong>total</strong> will be added to your score and you <strong>pick again</strong>.</li>
+                    <li>However, if you draw <strong>one "cat eye,"</strong> your <strong>turn is over</strong>.</li>
+                    <li>If both cards are <strong>"cat eyes,"</strong> your turn is over and your score <strong>zeroes out</strong>.</li>
+                    <li>After each turn, you can either <strong>draw again</strong> or <strong>pass</strong> if you're worried you might draw two “cat eyes.”</li>
+                    <li>The first player to <strong>30 points</strong> or more <strong>wins</strong>!</li>
+                </ol>
+            </section>
+            <button id="close">x</button>
+         </div>
+        
+
+    <div id="overlay" class="hidden">
+        <section id="player1cats" class="showing">
+            <section>
+                <h2>Player 1:</h2>
+                <h3>Pick your Cat!</h3>
+            </section>
+            <div class="cats" id="1">
+                <section class="back2">
+                    <img src="images/cat1.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat1">Uni</h4>
+                </section>
+            </div>
+            <div class="cats" id="2">
+                <section class="back2">
+                    <img src="images/cat2.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat2">Shake</h4>
+                </section>
+            </div>
+            <div class="cats" id="3">
+                <section class="back2">
+                    <img src="images/cat3.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat3">Tara</h4>
+                </section>
+            </div>
+            <div class="cats" id="4">
+                <section class="back2">
+                    <img src="images/cat4.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat4">Minnie</h4>
+                </section>
+            </div>
+        </section>
+
+        <section id="player2cats" class="hidden">
+            <section>
+                <h2>Player 2:</h2>
+                <h3>Pick your Cat!</h3>
+            </section>
+            <div class="cats" id="5">
+                <section class="back">
+                    <img src="images/cat5.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat5">Uni</h4>
+                </section>
+            </div>
+            <div class="cats" id="6">
+                <section class="back">
+                    <img src="images/cat6.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat6">Shake</h4>
+                </section>
+            </div>
+            <div class="cats" id="7">
+                <section class="back">
+                    <img src="images/cat7.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat7">Tara</h4>
+                </section>
+            </div>
+            <div class="cats" id="8">
+                <section class="back">
+                    <img src="images/cat8.svg" alt="Four Cats" height="300" width="300">
+                    <h4 class="catName" id="cat8">Minnie</h4>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <section id="maingame">
+        <section id="gameboard" class="hidden">
+            <div id="player1cat"></div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="game1"></div>
+            <div id="sum"></div>
+            <div id="game2"></div>
+            <div id="player2cat"></div>
+        </section>
+        <section id="names" class="hidden">
+            <div id="player1catName"></div>
+            <div id="player2catName"></div>
+        </section>
+        <section id="score">
+            <div id="score1"></div>
+            <div id="instruct"></div>
+            <div id="score2"></div>
+        </section>
+        <div id="snake" class="hidden"></div>
+        <div id="actions"></div>
+
+    </section>
+
+    <section id="winscreen" class="hidden">
+        <!-- from glenda: added <p> here for winner's name -->
+        <p id="winner"></p>
+        <img src="images/stars.svg" alt="Stars" class="stars" height="600" width="600">
+        <div id="winline"></div>
+        <button id="newGame">New Game?</button>
+    </section>
+</body>
+
+</html>
