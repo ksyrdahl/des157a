@@ -323,14 +323,18 @@ img {
 }
 
 #overlay h2{
-    font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 100px; 
+    /* font-family: 'Sue Ellen Francisco', cursive; */
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    /* font-size: 100px;  */
     width: 320px;
     text-align: center;
     height: 2px;
     position: absolute;
-    left: 24%;
-    top: 18%;
+    /* left: 24%; */
+    /* top: 18%; */
+    left: 26%;
+    top: 22%;
     text-transform: uppercase;
     border-radius: 25px;
 }
@@ -605,7 +609,7 @@ img {
 #player1catName {
     font-size: 50px;
     text-transform: uppercase;
-    color: #F8D0AC;
+    color: #e8bb93;
     position: relative;
     left: 2%;
     top: -15px;
@@ -617,7 +621,7 @@ img {
 #player2catName {
     font-size: 50px;
     text-transform: uppercase;
-    color: #F8D0AC;
+    color: #e8bb93;
     position: relative;
     left: 60%;
     top: -15px;
