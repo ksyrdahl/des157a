@@ -16,7 +16,7 @@ const score1 = document.getElementById('score1');
 const score2 = document.getElementById('score2');
 const actionArea = document.getElementById('actions');
 const catName = document.querySelectorAll('.catName');
-const cats = document.querySelectorAll('.cats');
+const catimgs = document.querySelectorAll('.back img');
 const player1cats = document.querySelector('#player1cats');
 const player1catName = document.querySelector('#player1catName');
 const player2cats = document.querySelector('#player2cats');
@@ -26,7 +26,6 @@ const player1cat = document.querySelector('#player1cat');
 const player2cat = document.querySelector('#player2cat');
 const help = document.querySelector('#help');
 const close = document.querySelector('#close');
-// const winner = document.getElementById('#winner');
 const shuffle = new Audio('sounds/shuffle.mp3');
 const meow = new Audio('sounds/meow.mp3');
 const cutemeow = new Audio('sounds/cutemeow.mp3');
@@ -51,7 +50,7 @@ startGame.addEventListener('click',function(event){
     document.getElementById('overlay').className = 'showing';
     // randomly set index
     gameData.index = Math.round(Math.random());
-    // console.log(`index: ${gameData.index}`);
+
     cutemeow.play();
 
     gameControl.innerHTML = '<h2>The Game Has Started<h2>';
@@ -64,12 +63,10 @@ startGame.addEventListener('click',function(event){
 
 }); 
 
-        // console.log(gameData);
 
         for (const cat of catName) {
             cat.addEventListener('click', function (event) {
-                // console.log(event.target.id);
-                // console.log(event.target.innerHTML);
+
                 // if player1cats section is showing
                 if (player1cats.getAttribute('class') == 'showing') {
                     // player 1's data is at position 0
@@ -94,6 +91,8 @@ startGame.addEventListener('click',function(event){
                     player2catName.innerHTML = `${event.target.innerHTML}`;
                     player2cats.className = 'hidden';
                     gameboard.className = 'showing';
+                    instruct.className = 'showing';
+                    score.className = 'showing';
                     names.className = 'showing';
                     document.getElementById('overlay').className = 'hidden';
                     document.getElementById('intro').className = 'hidden';
@@ -105,46 +104,46 @@ startGame.addEventListener('click',function(event){
                 }
             })
         }
+        
+        for (const cats of catimgs) {
+            cats.addEventListener('click', function (event) {
+                // if player1cats section is showing
+                const myCat= cats.id.slice(0,-3);
+                console.log(`myCat innerHTML: ${document.getElementById(myCat).innerHTML}`);
+                console.log(myCat);
+                if (player1cats.getAttribute('class') == 'showing') {
+                    // player 1's data is at position 0
+                    gameData.whichCat[0] = myCat;
+                    console.log(`Cat name 1: ${gameData.name[0]}`);
+                    player1cat.innerHTML = `<img src="images/${myCat}.svg">`;
+                    player1catName.innerHTML = document.getElementById(myCat).innerHTML;
+                    player1cats.className = 'hidden';
+                    player2cats.className = 'showing';
+                    document.querySelector('#player2cats').style.animation ='opac .5s';
+                    meow3.play();
+                } else {
+                    // player 2's data is at position 1
+                    gameData.whichCat[1] = myCat;
+                    // from glenda: updated the index from 0 to 1
+                    player2cat.innerHTML += `<img src="images/${myCat}.svg">`;
+                
+                    player2catName.innerHTML = document.getElementById(myCat).innerHTML;
+                    player2cats.className = 'hidden';
+                    gameboard.className = 'showing';
+                    names.className = 'showing';
+                    instruct.className = 'showing';
+                    score.className = 'showing';
+                    document.getElementById('overlay').className = 'hidden';
+                    document.getElementById('intro').className = 'hidden';
+                    cutemeow.play();
+                    document.querySelector('#maingame').style.animation ='opac 1s';
+                    // console.log("set up the turn!");
+                    setUpTurn();
+                    showCurrentScore(); 
+                }
+            })
+        }
 
-        // for (const cat of catName) {
-        //     cat.addEventListener('click', function (event) {
-        //         // console.log(event.target.id);
-        //         // console.log(event.target.innerHTML);
-        //         // if player1cats section is showing
-        //         if (player1cats.getAttribute('class') == 'showing') {
-        //             // player 1's data is at position 0
-        //             gameData.whichCat[0] = event.target.id;
-        //             gameData.name[0] = event.target.innerHTML;
-        //             // console.log(gameData.whichCat);
-        //             console.log(`Cat name 1: ${gameData.name[0]}`);
-        //             player1cat.innerHTML = `<img src="images/${event.target.id}.svg">`;
-        //             player1catName.innerHTML = `${event.target.innerHTML}`;
-        //             player1cats.className = 'hidden';
-        //             player2cats.className = 'showing';
-        //             document.querySelector('#player2cats').style.animation ='opac .5s';
-        //             meow3.play();
-        //         } else {
-        //             // player 2's data is at position 1
-        //             gameData.whichCat[1] = event.target.id;
-        //             // from glenda: updated the index from 0 to 1
-        //             gameData.name[1] = event.target.innerHTML;
-        //             // console.log(gameData.whichCat);
-        //             console.log(`Cat name 2: ${gameData.name[1]}`);
-        //             player2cat.innerHTML += `<img src="images/${event.target.id}.svg">`;
-        //             player2catName.innerHTML = `${event.target.innerHTML}`;
-        //             player2cats.className = 'hidden';
-        //             gameboard.className = 'showing';
-        //             names.className = 'showing';
-        //             document.getElementById('overlay').className = 'hidden';
-        //             document.getElementById('intro').className = 'hidden';
-        //             cutemeow.play();
-        //             document.querySelector('#maingame').style.animation ='opac 1s';
-        //             // console.log("set up the turn!");
-        //             setUpTurn();
-        //             showCurrentScore(); 
-        //         }
-        //     })
-        // }
 
         help.addEventListener ('click', function (event) {
             document.getElementById('rules').className = 'showing'; 
@@ -281,9 +280,6 @@ startGame.addEventListener('click',function(event){
                     location.reload();
                 });
 
-                // winner.innerHTML = `<h1>${gameData.player[gameData.index]}
-                // wins</h1>`;
-                // winner.innerHTML = `with ${gameData.score[gameData.index]} points!`;
                 
             }
         
@@ -297,6 +293,5 @@ startGame.addEventListener('click',function(event){
             score1.innerHTML = `<h1>Score:</h1><p> ${gameData.score[0]}</p>`;
             score2.innerHTML = `<h1>Score:</h1><p> ${gameData.score[1]}</p>`;
         }
-        // ${gameData.players[1]}
-        // ${gameData.players[0]}
+xs
 })();

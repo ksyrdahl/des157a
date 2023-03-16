@@ -169,7 +169,10 @@ strong {
     box-shadow: 5px 5px 31px 5px rgba(199, 55, 158, 0.548);  
 }
 
-.back2:hover{
+#orange:hover,
+#orange1:hover,
+#orange2:hover,
+#orange3:hover{
     background:#ffffff96;
     box-shadow: 5px 5px 31px 5px rgba(246,181,120,1);  
 }
@@ -680,6 +683,7 @@ img {
 
 #instruct {
     width: 450px;
+    display: block;
     text-align: center;
 }
 
@@ -705,4 +709,7 @@ img {
     margin: 50px;
     position: absolute;
     z-index: 1;
+    /* background: none;
+    border: none;
+    color:#763d63; */
 }
